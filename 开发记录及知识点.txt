@@ -1,0 +1,11 @@
+{# 载入头部 #}
+{%include 'head.html'%}
+
+
+{# 载入 EasyUI JS #}
+{% include 'head_easyui_js.html' %}
+
+拼音转换
+p = Pinyin()
+# print(p.get_initials("上海", ''))
+
