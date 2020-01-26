@@ -1,1 +1,3 @@
 xpinyin
+Cython
+pip install django-sqlserver django-pytds pyodbc django-pyodbc pypiwin32  

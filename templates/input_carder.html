@@ -17,39 +17,32 @@
 </head>
 <body>
     <div class="container">
-       <table id="dg" style="width:100%;height:529px" title="全体承运商列表" data-options="
+       <table id="dg" style="width:100%;height:529px" title="承运商列表" data-options="
                 rownumbers:true,
-                singleSelect:false,
+                singleSelect:true,
                 autoRowHeight:false,
                 pagination:true,
                 fitColumns:true,
                 striped:true,
-                checkOnSelect:false,
-                selectOnCheck:false,
+{#                checkOnSelect:false,#}
+{#                selectOnCheck:true,#}
                 collapsible:true,
                 toolbar:'#tb',
                 pageSize:10">
             <thead>
-                <tr>
-                    <th field="ck" checkbox="true"></th>
-                    <th field="ID" width="110">承运商编码</th>
-                    <th field="Carder_MarkName" width="226">承运商名称</th>
-                    <th field="Carder_User" width="170">联系人</th>
-                    <th field="Carder_Address" width="130">公司地址</th>
-                    <th field="Carder_BankInfo" width="136">账户信息</th>
-                    <th field="Carder_Cards" width="120">车辆信息</th>
-                    <th field="Carder_Control" width="105">操作</th>
-                </tr>
+            {% block tr %} {% endblock %}
             </thead>
         </table>
       <div id="tb" style="padding:0 30px;">
         <form id="f1" method="post">
-            {% csrf_token %}
+          {% csrf_token %}
+          <input type="hidden" name="EditType" value="">
+          <input type="hidden" name="Carder_Type" value="{% block Carder_Type_f1 %}{% endblock %}">
           <div class="conditions">
 {#            <span class="con-span">承运商编码: </span><input class="easyui-textbox" type="text" name="ID" style="width:166px;height:35px;line-height:35px;"></input>#}
             <span class="con-span">承运商名称: </span><input class="easyui-textbox" type="text" name="Carder_MarkName" style="width:166px;height:35px;line-height:35px;"></input>
             <a href="#" class="easyui-linkbutton search" iconCls="icon-search" data-options="selected:true">查询</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-reload">重置</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="$('#f1').form('reset');">重置</a>
 {#            <a href="#" class="easyui-linkbutton more" iconCls="icon-more">更多</a>#}
           </div>
 
@@ -60,8 +53,9 @@
 {#            <span class="con-span">合同状态: </span><input class="easyui-textbox" type="text" name="code" style="width:166px;height:35px;line-height:35px;"></input>#}
 {#          </div>#}
           <div class="opt-buttons">
-            <a href="#" class="easyui-linkbutton add-row" data-options="selected:true">新增</a>
-            <a href="#" class="easyui-linkbutton delete-row">删除</a>
+            <a href="#" class="easyui-linkbutton add-row" iconCls="icon-add" data-options="selected:true">新增</a>
+            <a href="#" class="easyui-linkbutton update-row" iconCls="icon-edit">修改</a>
+            <a href="#" class="easyui-linkbutton delete-row" iconCls="icon-remove">删除</a>
 {#            <a href="#" class="easyui-linkbutton">发布</a>#}
 {#            <a href="#" class="easyui-linkbutton">取消发布</a>#}
 {#            <a href="#" class="easyui-linkbutton">标记为执行完毕</a>#}
@@ -71,47 +65,16 @@
       </div>
       <div id="add" title="新增承运商" style="width:718px;display:none;">
           <form id="f2" method="post">
+            {% csrf_token %}
+            <input type="hidden" id="EditType" name="EditType" value="">
+            <input type="hidden" name="Carder_Type" value="{% block Carder_Type_f2 %}{% endblock %}">
+            <input type="hidden" id="ID" name="ID" value="">
             <div class="jq-form">
-              <div class="jq-form-row clearfix">
-                <label>承运商名称：</label>
-                <div class="jq-form-control">
-                  <input class="jq-form-input" type="text" />
-                </div>
-                <span class="jq-form-tip">
-                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
-                </span>
-              </div>
-              <div class="jq-form-row clearfix even">
-                <label>联系人：</label>
-                <div class="jq-form-control">
-                  <input class="jq-form-input" type="text" />
-                </div>
-                <span class="jq-form-tip">
-                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
-                </span>
-              </div>
-              <div class="jq-form-row clearfix">
-                <label>公司地址：</label>
-                <div class="jq-form-control">
-                  <input class="jq-form-input" type="text" />
-                </div>
-                <span class="jq-form-tip">
-                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
-                </span>
-              </div>
-              <div class="jq-form-row clearfix even">
-                <label>账户信息：</label>
-                <div class="jq-form-control">
-                  <input class="jq-form-input" type="text" />
-                </div>
-                <span class="jq-form-tip">
-                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
-                </span>
-              </div>
+                {% block input %} {% endblock %}
 
               <div class="jq-form-row clearfix jq-form-submit">
                 <div class="jq-form-control">
-                  <a href="#" onclick="AddCarder();" class="easyui-linkbutton" data-options="selected:true">确定</a>
+                  <a href="#" onclick="PostAddCarder();" class="easyui-linkbutton" data-options="selected:true,">确定</a>
                   <a href="#" onclick="$('#add').dialog('close')" class="easyui-linkbutton">关闭</a>
                 </div>
               </div>
@@ -129,36 +92,12 @@
     <script type="text/javascript">
 
         $('.add-row').on('click', function() {
-          $('#add').dialog({
-              cache: false,
-              modal: true
-          });
-          $('#time').datetimebox({
-              value: '3/4/2010 2:3',
-              required: true,
-              showSeconds: false
-          });
-        })
-
-        $('.delete-row').on('click', function() {
-          $.messager.confirm({
-            title: '提示信息',
-            ok: '确定',
-            icon: 'error',
-            cancel: '取消',
-            msg: '你确定要删除选中记录？',
-            fn: function(r) {
-
-              if(r) {
-                console.log('YES');
-              } else {
-                console.log('NO');
-              }
-
-            }
-          });
-          $('.messager-window').find('.l-btn-small').eq(0).addClass('l-btn-selected');
-          $('.messager-window').find('.messager-icon').removeClass('messager-question').addClass('messager-error');
+            //设置提交类别EditType为添加
+            $('#EditType').val('add');
+            //弹出dialog
+            showDialog('add', '增加资料');
+            //清除某ID下面所有文本框
+            clearInput('f2')
         })
 
         $(function(){
@@ -177,6 +116,7 @@
             CheckPost();
         });
 
+        //查询承运商
         function CheckPost(){
             $('#f1').form('submit', {
                 url:'/JSON/aa',
@@ -191,20 +131,87 @@
             });
         }
 
-        function AddCarder() {
+        // 提交操作
+        function PostAddCarder() {
             $('#f2').form('submit', {
                 url:'/JSON/ab',
                 onSubmit: function(){
+                    //开启进度条
                     loading(1);
                 },
                 success:function(data){
-                    {#console.log(data)#}
-                    $('#dg').datagrid({data: JSON.parse(data)}).datagrid('clientPaging');
+                    //关闭进度条
                     loading(0)
+                    data = JSON.parse(data);
+                    console.log(data);
+                    if(!data.err){
+                        if(data['data'].EditType=='add'){
+                            //如果是添加动作，就向datagrid增加一条记录，不用刷新
+                            addRow('dg', data.data);
+                        }else if(data['data'].EditType=='edit'){
+                            //否则如果是编辑动作，就更新刚才的那条选中的记录，不刷新
+                            updateRow('dg', data.data);
+                        }
+                        $.messager.alert('操作成功','操作成功');
+                        {#$('#f2').form('clear');#}
+                        $('#add').dialog('close')
+                    }else{
+                        $.messager.alert('操作失败',data.err);
+                    }
                 }
             });
-            alert(1)
         }
+
+        //修改某条记录
+        $('.update-row').on('click', function() {
+          let SelectRow = $('#dg').datagrid('getSelected');
+          //设置提交类别EditType为添加
+          $('#EditType').val('edit');
+          if(!SelectRow){
+              $.messager.alert('操作失败','先选中需要操作的行。');
+              return false;
+          }
+          //将选中行的内容赋给各个输入框
+          for(let key in SelectRow){
+              $('#' + key).val(SelectRow[key])
+          }
+            //弹出dialog
+            showDialog('add', '修改资料');
+        });
+
+        //删除某条记录
+        $('.delete-row').on('click', function() {
+          let row = $('#dg').datagrid('getSelected');
+          {#console.log(row)#}
+          if(!row){
+              $.messager.alert('操作失败','先选中需要操作的行。');
+              return false;
+          }
+          $.messager.confirm({
+            title: '提示信息',
+            ok: '确定',
+            icon: 'error',
+            cancel: '取消',
+            msg: '你确定要删除选中记录？',
+            fn: function(r) {
+              if(r) {
+                $.getJSON("/JSON/ac", { ID: row.ID }, function(data){
+                    if(!data.err) {
+                        //删除指定行
+                        deleteRow('dg');
+                 }else {
+                   $.messager.alert('操作失败',data.err);
+                 }
+                });
+              } else {
+                console.log('NO');
+              }
+            }
+          });
+          $('.messager-window').find('.l-btn-small').eq(0).addClass('l-btn-selected');
+          $('.messager-window').find('.messager-icon').removeClass('messager-question').addClass('messager-error');
+        })
+
     </script>
 </body>
 </html>

@@ -16,10 +16,13 @@ var SystemMenu = [{
 		icon: '&#xe620;',
 		isCurrent: false,
 		children: [{
-			title: '承运商录入',
-			href: 'input_carder.html'
+			title: '专线管理',
+			href: 'input_carder_zx.html'
 		},{
-			title: '承运商管理',
+			title: '整车管理',
+			href: 'input_carder_zc.html'
+		},{
+			title: 'aaa',
 			href: 'providers.html'
 		},{
 			title: '承运商其他1',

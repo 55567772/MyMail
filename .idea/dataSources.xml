@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db.sqlite3" uuid="4eb5941d-44e9-4950-a545-6ef773464561">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="GPS" uuid="9226cb96-6dbc-4258-9059-d2586dd03e48">
+      <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/DB/db.sqlite3</jdbc-url>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://localhost;database=GPS</jdbc-url>
     </data-source>
   </component>
 </project>
