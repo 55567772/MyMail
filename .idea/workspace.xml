@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64923359-9039-4f27-9efe-fb67761f3e6e" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4eb5941d-44e9-4950-a545-6ef773464561.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/DB/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyMail/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyMail/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Urls/get_JSON.py" beforeDir="false" afterPath="$PROJECT_DIR$/Urls/get_JSON.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/JS/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/function.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/WebStyle/green/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/WebStyle/green/js/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/input_carder.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/input_carder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Urls/get_Template.py" beforeDir="false" afterPath="$PROJECT_DIR$/Urls/get_Template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/关联python包.txt" beforeDir="false" afterPath="$PROJECT_DIR$/关联python包.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/开发记录及知识点.txt" beforeDir="false" afterPath="$PROJECT_DIR$/开发记录及知识点.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/软件要求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/软件要求.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +39,6 @@
         <item name="GPS" type="feb32156:DbDataSourceImpl" />
         <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
         <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="GPS" type="feb32156:DbDataSourceImpl" />
-        <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
-        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
-        <item name="Carder: table" type="63ab2ba1:MsImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -206,7 +188,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:GPS" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:GPS" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6f811f84" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -227,7 +219,7 @@
       <workItem from="1579655815203" duration="80126000" />
       <workItem from="1579946185571" duration="1764000" />
       <workItem from="1579947987009" duration="4069000" />
-      <workItem from="1580001865120" duration="770000" />
+      <workItem from="1580001865120" duration="16103000" />
     </task>
     <task id="LOCAL-00001" summary="XM by 20200123,For GPS">
       <created>1579760690550</created>
@@ -236,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579760690550</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="XM by 20200123,For GPS">
+      <created>1580002789601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580002789601</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,10 +266,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580001663396" />
-    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1579760659437">
+    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1580002787457">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1579760659437" />
+    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580002787457" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1579780465172">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -280,26 +279,26 @@
     </state>
     <state x="420" y="124" key="FileChooserDialogImpl/0.0.1280.738@0.0.1280.738" timestamp="1579599960244" />
     <state x="448" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580001904541" />
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1580001837733">
+    <state width="905" height="191" key="GridCell.Tab.0.bottom" timestamp="1580020301274">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.bottom/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580001837733" />
-    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1580001837733">
+    <state width="905" height="191" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580020301274" />
+    <state width="905" height="191" key="GridCell.Tab.0.center" timestamp="1580020301274">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.center/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580001837733" />
-    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1580001837733">
+    <state width="905" height="191" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580020301274" />
+    <state width="905" height="191" key="GridCell.Tab.0.left" timestamp="1580020301259">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.left/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580001837733" />
-    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1580001837733">
+    <state width="905" height="191" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580020301259" />
+    <state width="905" height="191" key="GridCell.Tab.0.right" timestamp="1580020301274">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.right/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580001837733" />
+    <state width="905" height="191" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580020301274" />
     <state width="237" height="477" key="HiddenNamespacesPopup" timestamp="1579948062722">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -320,10 +319,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="498" y="192" width="370" height="350" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.738@0.0.1366.738" timestamp="1580002224403" />
-    <state x="392" y="8" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580002271567">
+    <state x="392" y="8" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580003238135">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="392" y="8" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1580002271567" />
+    <state x="392" y="8" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1580003238135" />
     <state x="539" y="115" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1579939617733">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

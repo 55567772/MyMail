@@ -5,6 +5,4 @@ from django.views.decorators.clickjacking import xframe_options_exempt, xframe_o
 
 @xframe_options_exempt
 def redirect(request, page_name):
-    # page_name = request.GET.get('p', 'index.html')
-    print('------------------------', page_name)
     return render(request, page_name)

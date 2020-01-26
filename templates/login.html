@@ -3,9 +3,9 @@
 <head> 
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>uimaker信息管理系统</title> 
-    <link href="static/green/css/base.css" rel="stylesheet">
-    <link href="static/green/css/login/login.css" rel="stylesheet">
+    <title>信息管理系统</title>
+    <link href="/static/WebStyle/green/css/base.css" rel="stylesheet">
+    <link href="/static/WebStyle/green/css/login/login.css" rel="stylesheet">
 
 </head> 
 <body class="default">
@@ -15,7 +15,7 @@
 		<div class="hd-inner">
 			<span class="logo"></span>
 			<span class="split"></span>
-			<span class="sys-name">采购协同平台</span>
+			<span class="sys-name">{{ title }}</span>
 		</div>
 	</div>
 	<div class="login-bd">
@@ -24,34 +24,30 @@
 				<div class="lg-zone">
 					<div class="lg-box">
 						<div class="lg-label"><h4>用户登录</h4></div>
-						<div class="alert alert-error">
-			              <i class="iconfont">&#xe62e;</i>
-			              <span>请输入用户名</span>
-			            </div>
 						<form>
 							<div class="lg-username input-item clearfix">
 								<i class="iconfont">&#xe60d;</i>
-								<input type="text" placeholder="账号/邮箱">
+								<input type="text" name="username" placeholder="账号">
 							</div>
 							<div class="lg-password input-item clearfix">
 								<i class="iconfont">&#xe634;</i>
-								<input type="password" placeholder="请输入密码">
+								<input type="password" name="password" placeholder="密码">
 							</div>
-							<div class="lg-check clearfix">
-								<div class="input-item">
-									<i class="iconfont">&#xe633;</i>
-									<input type="text" placeholder="验证码">
-								</div>
-								<span class="check-code">XD34F</span>
-							</div>
-							<div class="tips clearfix">
-								<label><input type="checkbox" checked="checked">记住用户名</label>
-								<a href="javascript:;" class="register">立即注册</a>
-								<a href="javascript:;" class="forget-pwd">忘记密码？</a>
-							</div>
+{#							<div class="lg-check clearfix">#}
+{#								<div class="input-item">#}
+{#									<i class="iconfont">&#xe633;</i>#}
+{#									<input type="text" placeholder="验证码">#}
+{#								</div>#}
+{#								<span class="check-code">XD34F</span>#}
+{#							</div>#}
+{#							<div class="tips clearfix">#}
+{#								<label><input type="checkbox" checked="checked">记住用户名</label>#}
+{#								<a href="javascript:;" class="register">立即注册</a>#}
+{#								<a href="javascript:;" class="forget-pwd">忘记密码？</a>#}
+{#							</div>#}
 							<div class="enter">
-								<a href="javascript:;" class="purchaser" onClick="javascript:window.location='main.html'">采购商登录</a>
-								<a href="javascript:;" class="supplier" onClick="javascript:window.location='main.html'">供应商登录</a>
+								<a href="javascript:;" class="purchaser" onClick="javascript:window.location='/get_tpl/main.html#'">登录</a>
+								<a href="javascript:;" class="supplier" onClick="">重输</a>
 							</div>
 						</form>
 					</div>
@@ -68,8 +64,7 @@
 				<a href="javascript:;">服务条款</a>
 				<a href="javascript:;">联系方式</a>
 			</div>
-			<div class="address">地址：江苏省南京市雨花台区软件园&nbsp;邮编：210019&nbsp;&nbsp;Copyright&nbsp;©&nbsp;2015&nbsp;-&nbsp;2016&nbsp;uimaker-专注于ui设计&nbsp;版权所有</div>
-			<div class="other-info">建议使用IE8及以上版本浏览器&nbsp;苏ICP备&nbsp;09003078号&nbsp;E-mail：admin@uimaker.com</div>
+			<div class="address">{{title}}</div>
 		</div>
 	</div>
 </body> 
