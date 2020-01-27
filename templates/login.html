@@ -6,8 +6,15 @@
     <title>信息管理系统</title>
     <link href="/static/WebStyle/green/css/base.css" rel="stylesheet">
     <link href="/static/WebStyle/green/css/login/login.css" rel="stylesheet">
+    <link href="/static/WebStyle/green/css/base.css?{{ ver }}" rel="stylesheet">
+    <link rel="stylesheet" href="/static/custom/green/uimaker/easyui.css?{{ ver }}">
+    <link rel="stylesheet" type="text/css" href="/static/custom/green/uimaker/icon.css?{{ ver }}">
+    <script type="text/javascript" src="/static/custom/green/jquery.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/custom/green/jquery.easyui.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/custom/green/easyui-lang-zh_CN.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/JS/function.js?{{ ver }}"></script>
 
-</head> 
+</head>
 <body class="default">
 	<div class="login-hd">
 		<div class="left-bg"></div>
@@ -24,14 +31,15 @@
 				<div class="lg-zone">
 					<div class="lg-box">
 						<div class="lg-label"><h4>用户登录</h4></div>
-						<form>
+						<form id="f1" method="post">
+                            {% csrf_token %}
 							<div class="lg-username input-item clearfix">
 								<i class="iconfont">&#xe60d;</i>
-								<input type="text" name="username" placeholder="账号">
+								<input type="text" name="u" value="vc" placeholder="账号">
 							</div>
 							<div class="lg-password input-item clearfix">
 								<i class="iconfont">&#xe634;</i>
-								<input type="password" name="password" placeholder="密码">
+								<input type="password" name="p" value="xjj" placeholder="密码">
 							</div>
 {#							<div class="lg-check clearfix">#}
 {#								<div class="input-item">#}
@@ -46,7 +54,7 @@
 {#								<a href="javascript:;" class="forget-pwd">忘记密码？</a>#}
 {#							</div>#}
 							<div class="enter">
-								<a href="javascript:;" class="purchaser" onClick="javascript:window.location='/get_tpl/main.html#'">登录</a>
+								<a href="javascript:;" class="purchaser">登录</a>
 								<a href="javascript:;" class="supplier" onClick="">重输</a>
 							</div>
 						</form>
@@ -71,5 +79,22 @@
 </html>
     
 <script type="text/javascript">
-
+$('.purchaser').on('click', function() {
+    //登陆
+    $('#f1').form('submit', {
+        url:'/JSON/lo',
+        onSubmit: function(){
+            loading(1);
+        },
+        success:function(data){
+            loading(0)
+            data = JSON.parse(data);
+            if(data.err){
+                $.messager.alert('提示','登陆失败!','error');
+            }else{
+                window.location = data.url;
+            }
+        }
+    });
+});
 </script>
