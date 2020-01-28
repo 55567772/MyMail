@@ -130,6 +130,7 @@ class GetJSON:
         Mobile_OrderNumber = "%s" % self.args.get('Mobile_OrderNumber', '').strip().replace("'", "")
         Carder_ID = "%s" % self.args.get('Carder_ID', '').strip().replace("'", "")
         Mobile_Client = "%s" % self.args.get('Mobile_Client', '').strip().replace("'", "")
+        Mobile_Bak_Info = "%s" % self.args.get('Mobile_Bak_Info', '').strip().replace("'", "")
 
         if Mobile_OrderNumber:
             other_sql += "and Mobile_OrderNumber like '%{0}%'".format(Mobile_OrderNumber)
@@ -137,8 +138,11 @@ class GetJSON:
             other_sql += "and Carder_ID = '{0}'".format(Carder_ID)
         if Mobile_Client:
             other_sql += "and Mobile_Client like '%{0}%'".format(Mobile_Client)
+        if Mobile_Bak_Info:
+            other_sql += "and Mobile_Bak_Info like '%{0}%'".format(Mobile_Bak_Info)
+
         sql = 'Select *,' \
-              '(select top 1 Carder_MarkName from Carder where ID = [Mobile].Carder_ID) as Carder_MarkName ' \
+              '(select top 1 Carder_MarkName from Carder where ID = dbo.Mobile.Carder_ID) as Carder_MarkName ' \
               'from Mobile {0} order by ID desc'.format(other_sql)
         result = conn.sDB(sql)
         return str(json.dumps(result, cls=DateEncoder))
@@ -146,31 +150,37 @@ class GetJSON:
     # 添加，修改 订单
     def ae(self):
         Mobile_OrderNumber = "TC" + str(datetime.datetime.now().strftime('%Y%m%d%H%M%S%f'))
+        DateTime = self.args.get('DateTime', datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S'))
+        print(DateTime)
         try:
             conn.eDB("INSERT INTO Mobile("
                      "Mobile_OrderNumber, Carder_ID, Mobile_Client, "
                      "Mobile_Goods, Mobile_Goods_Count, Mobile_Goods_Square, "
                      "Mobile_KG, Mobile_Receive_Person, Mobile_Contact_Type, "
-                     "Mobile_Address, Mobile_CJ_Price, Mobile_CJ_Price_Count, "
-                     "Mobile_CB_Price, Mobile_CB_Price_Count, Mobile_Clear_Type, Mobile_Make_Tick) values "
+                     "Mobile_Address, Mobile_CJ_Price, Mobile_CJ_Other_Price, Mobile_CJ_Price_Count, "
+                     "Mobile_CB_Price, Mobile_CB_Other_Price, Mobile_CB_Price_Count, "
+                     "Mobile_Clear_Type, Mobile_Make_Tick, DateTime) values "
                      "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',"
-                     "'{10}','{11}','{12}','{13}','{14}','{15}')"
+                     "'{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}')"
                      .format(Mobile_OrderNumber,
-                             self.args.get('Carder_ID', ''),
+                             int(self.args.get('Carder_ID', 1)),
                              self.args.get('Mobile_Client', ''),
                              self.args.get('Mobile_Goods', ''),
-                             self.args.get('Mobile_Goods_Count', ''),
-                             self.args.get('Mobile_Goods_Square', ''),
-                             self.args.get('Mobile_KG', ''),
+                             float(self.args.get('Mobile_Goods_Count', 0)),
+                             float(self.args.get('Mobile_Goods_Square', 0)),
+                             float(self.args.get('Mobile_KG', 0)),
                              self.args.get('Mobile_Receive_Person', ''),
                              self.args.get('Mobile_Contact_Type', ''),
                              self.args.get('Mobile_Address', ''),
-                             self.args.get('Mobile_CJ_Price', ''),
-                             self.args.get('Mobile_CJ_Price_Count', ''),
-                             self.args.get('Mobile_CB_Price', ''),
-                             self.args.get('Mobile_CB_Price_Count', ''),
+                             float(self.args.get('Mobile_CJ_Price', 0)),
+                             float(self.args.get('Mobile_CJ_Other_Price', 0)),
+                             float(self.args.get('Mobile_CJ_Price_Count', 0)),
+                             float(self.args.get('Mobile_CB_Price', 0)),
+                             float(self.args.get('Mobile_CB_Other_Price', 0)),
+                             float(self.args.get('Mobile_CB_Price_Count', 0)),
                              self.args.get('Mobile_Clear_Type', ''),
-                             self.args.get('Mobile_Make_Tick', ''))
+                             self.args.get('Mobile_Make_Tick', ''),
+                             DateTime),
                      )
             res_id = conn.sDB("select cast(IDENT_CURRENT('Carder') as nvarchar(20)) as ID")[0]
             self.args['ID'] = int(res_id['ID'])
