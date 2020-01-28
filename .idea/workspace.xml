@@ -2,10 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64923359-9039-4f27-9efe-fb67761f3e6e" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/INFORMATION_SCHEMA.NBgcMw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codes/Functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LOGO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Images/demo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-bufferview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-bufferview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-defaultview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-detailview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-detailview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-detailview2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-groupview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-groupview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-scrollview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-scrollview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-scrollview2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid_data.asp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/jquery-easyui-datagridview.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Mobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Mobile_Manager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/User_Log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/User_Manager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/input_carder_zc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/input_carder_zx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/DB/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Urls/get_JSON.py" beforeDir="false" afterPath="$PROJECT_DIR$/Urls/get_JSON.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/软件要求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/软件要求.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +74,6 @@
         <item name="GPS" type="feb32156:DbDataSourceImpl" />
         <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
         <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="GPS" type="feb32156:DbDataSourceImpl" />
-        <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
-        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
-        <item name="Mobile: table" type="63ab2ba1:MsImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -218,12 +247,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:GPS" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -246,6 +270,7 @@
       <workItem from="1579947987009" duration="4069000" />
       <workItem from="1580001865120" duration="39324000" />
       <workItem from="1580101827800" duration="19810000" />
+      <workItem from="1580175160277" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="XM by 20200123,For GPS">
       <created>1579760690550</created>
@@ -275,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580119831454</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="20200128 AM">
+      <created>1580175325009</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580175325009</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +327,8 @@
     <MESSAGE value="XM by 20200123,For GPS" />
     <MESSAGE value="XM by 20200126,For GPS" />
     <MESSAGE value="G" />
-    <option name="LAST_COMMIT_MESSAGE" value="G" />
+    <MESSAGE value="20200128 AM" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200128 AM" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="27" key="#Deployment" timestamp="1579759385633">
@@ -318,10 +351,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580030907527" />
-    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1580119829673">
+    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1580175323462">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580119829673" />
+    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580175323462" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1579780465172">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

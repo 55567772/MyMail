@@ -1,0 +1,91 @@
+﻿{% extends "input_carder.html" %}
+
+
+{% block Carder_Type_f1 %}整车{% endblock %}
+{% block Carder_Type_f2 %}整车{% endblock %}
+
+{% block tr %}
+                <tr>
+                    <th field="ID" width="50">编码</th>
+                    <th field="Carder_MarkName" width="100">司机姓名</th>
+                    <th field="Carder_Mobile" width="100">联系电话</th>
+                    <th field="Carder_Address" width="130">联系地址</th>
+                    <th field="Carder_BankUserName" width="120">账户名</th>
+                    <th field="Carder_BankNumber" width="130">银行卡号</th>
+                    <th field="Carder_BankLive" width="100">开户行</th>
+                    <th field="Carder_CarNumber" width="80">车牌号码</th>
+                    <th field="Carder_GPS" width="80">坐标</th>
+                    <th field="Carder_BakInfo" width="80">备注</th>
+                </tr>
+{% endblock %}
+
+{% block input %}
+               <div class="jq-form-row clearfix">
+                <label>司机姓名：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_MarkName" name="Carder_MarkName" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>联系电话：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_Mobile" name="Carder_Mobile" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+              <div class="jq-form-row clearfix even">
+                <label>联系地址：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_Address" name="Carder_Address" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>账户名：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_BankUserName" name="Carder_BankUserName" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>银行卡号：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_BankNumber" name="Carder_BankNumber" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>开户行：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_BankLive" name="Carder_BankLive" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>车牌号码：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_CarNumber" name="Carder_CarNumber" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+{% endblock %}
