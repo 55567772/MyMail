@@ -2,46 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64923359-9039-4f27-9efe-fb67761f3e6e" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/INFORMATION_SCHEMA.NBgcMw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Codes/Functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LOGO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Images/demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-bufferview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-bufferview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-defaultview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-detailview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-detailview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-detailview2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-groupview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-groupview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-scrollview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-scrollview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid-scrollview2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/datagrid_data.asp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/datagridview/images/EST-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/UI_Plugs/jquery-easyui-datagridview.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Mobile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Mobile_Manager.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/User_Log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/User_Manager.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/input_carder_zc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/input_carder_zx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/DB/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Urls/get_JSON.py" beforeDir="false" afterPath="$PROJECT_DIR$/Urls/get_JSON.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Urls/get_Template.py" beforeDir="false" afterPath="$PROJECT_DIR$/Urls/get_Template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/JS/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/WebStyle/green/css/process.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/WebStyle/green/css/process.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/WebStyle/green/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/WebStyle/green/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/WebStyle/green/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/WebStyle/green/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Mobile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mobile_Manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Mobile_Manager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/User_Manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/User_Manager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/开发记录及知识点.txt" beforeDir="false" afterPath="$PROJECT_DIR$/开发记录及知识点.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/软件要求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/软件要求.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +52,20 @@
         <item name="GPS" type="feb32156:DbDataSourceImpl" />
         <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
         <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="GPS" type="feb32156:DbDataSourceImpl" />
+        <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+        <item name="Admin: table" type="63ab2ba1:MsImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="GPS" type="feb32156:DbDataSourceImpl" />
+        <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+        <item name="Page_Manager: table" type="63ab2ba1:MsImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -109,11 +101,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyDjango" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.quicklists" />
   </component>
-  <component name="RunManager" selected="Django server.MyMail">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebSites\MyMail\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test1">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyMail" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,7 +244,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:GPS" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -270,7 +272,10 @@
       <workItem from="1579947987009" duration="4069000" />
       <workItem from="1580001865120" duration="39324000" />
       <workItem from="1580101827800" duration="19810000" />
-      <workItem from="1580175160277" duration="670000" />
+      <workItem from="1580175160277" duration="43814000" />
+      <workItem from="1580359945767" duration="4680000" />
+      <workItem from="1580370602938" duration="3807000" />
+      <workItem from="1580376495536" duration="12663000" />
     </task>
     <task id="LOCAL-00001" summary="XM by 20200123,For GPS">
       <created>1579760690550</created>
@@ -307,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580175325009</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="20200128 AM">
+      <created>1580175936900</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580175936900</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +351,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="44" key="#HTTP_Proxy/0.0.1366.738@0.0.1366.738" timestamp="1579742831195" />
+    <state x="275" y="27" key="#Inspections" timestamp="1580370482585">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1580370482585" />
     <state x="275" y="27" key="#SQL_Dialects" timestamp="1580002192636">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -347,63 +363,67 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="27" key="#SQL_Resolution_Scopes/0.0.1366.738@0.0.1366.738" timestamp="1580001927640" />
-    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580030907527">
+    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580376425385">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580030907527" />
-    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1580175323462">
+    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580376425385" />
+    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1580175929322">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580175323462" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1579780465172">
+    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580175929322" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1580376412713">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.738@0.0.1366.738" timestamp="1579780465172" />
-    <state x="448" y="124" key="FileChooserDialogImpl" timestamp="1580119847657">
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.738@0.0.1366.738" timestamp="1580376412713" />
+    <state x="448" y="124" key="FileChooserDialogImpl" timestamp="1580282199689">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="420" y="124" key="FileChooserDialogImpl/0.0.1280.738@0.0.1280.738" timestamp="1579599960244" />
-    <state x="448" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580119847657" />
-    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog" timestamp="1580120182295">
+    <state x="448" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580282199689" />
+    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog" timestamp="1580176009230">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog/0.0.1366.738@0.0.1366.738" timestamp="1580120182295" />
-    <state width="1323" height="145" key="GridCell.Tab.0.bottom" timestamp="1580175119609">
+    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog/0.0.1366.738@0.0.1366.738" timestamp="1580176009230" />
+    <state width="1323" height="117" key="GridCell.Tab.0.bottom" timestamp="1580435105537">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.bottom/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="145" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580175119609" />
-    <state width="1323" height="145" key="GridCell.Tab.0.center" timestamp="1580175119609">
+    <state width="1323" height="117" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580435105537" />
+    <state width="1323" height="117" key="GridCell.Tab.0.center" timestamp="1580435105537">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.center/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="145" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580175119609" />
-    <state width="1323" height="145" key="GridCell.Tab.0.left" timestamp="1580175119609">
+    <state width="1323" height="117" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580435105537" />
+    <state width="1323" height="117" key="GridCell.Tab.0.left" timestamp="1580435105537">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.left/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="145" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580175119609" />
-    <state width="1323" height="145" key="GridCell.Tab.0.right" timestamp="1580175119609">
+    <state width="1323" height="117" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580435105537" />
+    <state width="1323" height="117" key="GridCell.Tab.0.right" timestamp="1580435105537">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.right/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="145" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580175119609" />
+    <state width="1323" height="117" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580435105537" />
     <state width="237" height="477" key="HiddenNamespacesPopup" timestamp="1579948062722">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="237" height="477" key="HiddenNamespacesPopup/0.0.1366.738@0.0.1366.738" timestamp="1579948062722" />
-    <state x="184" y="11" key="SettingsEditor" timestamp="1579759950208">
+    <state x="184" y="11" key="SettingsEditor" timestamp="1580359773302">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="184" y="11" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1579759950208" />
+    <state x="184" y="11" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1580359773302" />
     <state width="239" height="461" key="SqlResolveConfigurable" timestamp="1580001926047">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="239" height="461" key="SqlResolveConfigurable/0.0.1366.738@0.0.1366.738" timestamp="1580001926047" />
-    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1580024603570">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1580176056166">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738@0.0.1366.738" timestamp="1580024603570" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580176056166" />
+    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1580381355142">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738@0.0.1366.738" timestamp="1580381355142" />
     <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog" timestamp="1580021691462">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -412,30 +432,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="498" y="192" width="370" height="350" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.738@0.0.1366.738" timestamp="1580002224403" />
-    <state x="42" y="107" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580173764542">
+    <state x="368" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580381281978">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="42" y="107" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1580173764542" />
+    <state x="368" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1580381281978" />
     <state x="539" y="115" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1579939617733">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="539" y="115" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.738@0.0.1366.738" timestamp="1579939617733" />
-    <state x="361" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1580175161154">
+    <state x="361" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1580376497808">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="338" y="193" key="com.intellij.ide.util.TipDialog/0.0.1280.738@0.0.1280.738" timestamp="1579655851271" />
-    <state x="361" y="201" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1580175161154" />
+    <state x="361" y="201" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1580376497808" />
     <state x="261" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579926469573">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="261" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738@0.0.1366.738" timestamp="1579926469573" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1580174946720">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1580384487454">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1580174946720" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1580384487454" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MyMail$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1580102695502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MyMail$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1580435105524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MyMail$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1580096995388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
     <SUITE FILE_PATH="coverage/MyMail$urls.coverage" NAME="urls Coverage Results" MODIFIED="1579941213238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MyMail" />
     <SUITE FILE_PATH="coverage/MyMail$test.coverage" NAME="test Coverage Results" MODIFIED="1580000976243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />

@@ -3,22 +3,24 @@
 
 {% block tr %}
                 <tr>
-                    <th data-options="field:'Mobile_OrderNumber', width:180">订单号</th>
-                    <th data-options="field:'Carder_MarkName', width:100">承运商</th>
+                    <th data-options="field:'DateTime', width:180">日期</th>
+{#                    <th data-options="field:'Carder_MarkName', width:100">承运商</th>#}
                     <th data-options="field:'Mobile_Client', width:100">客户</th>
                     <th data-options="field:'Mobile_Goods', width:100">货品</th>
-                    <th data-options="field:'Mobile_Goods_Count', width:100">数量</th>
-                    <th data-options="field:'Mobile_Goods_Square', width:100">方数</th>
-                    <th data-options="field:'Mobile_KG', width:100,formatter:format_KG">重量</th>
-{#                    <th data-options="field:'Mobile_Receive_Person', width:100">收货人</th>#}
-{#                    <th data-options="field:'Mobile_Contact_Type', width:100">联系方式</th>#}
-{#                    <th data-options="field:'Mobile_Address', width:100">地址</th>#}
-                    <th data-options="field:'Mobile_CJ_Price', width:100,formatter:format_money">厂家单价</th>
-                    <th data-options="field:'Mobile_CJ_Other_Price', width:100,formatter:format_money">厂家送货费<BR>其他费用</th>
-                    <th data-options="field:'Mobile_CJ_Price_Count', width:100,formatter:format_money">厂家总价格</th>
-                    <th data-options="field:'Mobile_CB_Price', width:100,formatter:format_money">成本单价</th>
-                    <th data-options="field:'Mobile_CB_Other_Price', width:100,formatter:format_money">成本送货费<BR>其他费用</th>
-                    <th data-options="field:'Mobile_CB_Price_Count', width:100,formatter:format_money">成本总价格</th>
+                    <th data-options="field:'Mobile_Goods_Count', width:80">数量</th>
+                    <th data-options="field:'Mobile_Goods_Square', width:80">方数</th>
+                    <th data-options="field:'Mobile_KG', width:100,formatter:format_KG, width:80">重量</th>
+                    <th data-options="field:'Mobile_Receive_Person', width:100">收货人</th>
+                    <th data-options="field:'Mobile_Contact_Type', width:100">联系方式</th>
+                    <th data-options="field:'Mobile_Address', width:200">地址</th>
+                    <th data-options="field:'Mobile_Start_Address', width:100">起运地</th>
+                    <th data-options="field:'Mobile_End_Address', width:100">目的地</th>
+{#                    <th data-options="field:'Mobile_CJ_Price', width:100,formatter:format_money">厂家单价</th>#}
+{#                    <th data-options="field:'Mobile_CJ_Other_Price', width:100,formatter:format_money">厂家送货费<BR>其他费用</th>#}
+{#                    <th data-options="field:'Mobile_CJ_Price_Count', width:100,formatter:format_money">厂家总价格</th>#}
+{#                    <th data-options="field:'Mobile_CB_Price', width:100,formatter:format_money">成本单价</th>#}
+{#                    <th data-options="field:'Mobile_CB_Other_Price', width:100,formatter:format_money">成本送货费<BR>其他费用</th>#}
+{#                    <th data-options="field:'Mobile_CB_Price_Count', width:100,formatter:format_money">成本总价格</th>#}
                     <th data-options="field:'Mobile_Clear_Type', width:100">结算方式</th>
                     <th data-options="field:'Mobile_Make_Tick', width:100">客户<br>是否开票</th>
                     <th data-options="field:'Mobile_GPS', width:100">GPS</th>
@@ -42,7 +44,7 @@
                <div class="jq-form-row clearfix">
                 <label>承运商：</label>
                 <div class="jq-form-control">
-			<input name="Carder_ID" class="easyui-combogrid" style="width:100%;height: 35px" data-options="
+			    <input id="Carder_ID" name="Carder_ID" class="easyui-combogrid" style="width:100%;height: 35px" data-options="
 					panelWidth: 500,
 					idField: 'ID',
 					textField: 'Carder_MarkName',
@@ -51,6 +53,7 @@
                     mode: 'remote',
                     remoteSort:false,
                     multiSort:true,
+                    required:true,
 					columns: [[
 						{field:'ID',title:'编号',width:80,sortable:true},
 						{field:'Carder_MarkName',title:'承运商',width:100,sortable:true},
@@ -147,6 +150,25 @@
               </div>
 
               <div class="jq-form-row clearfix even">
+                <label>起运地：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Start_Address" name="Mobile_Start_Address" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>目的地：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_End_Address" name="Mobile_End_Address" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+              <div class="jq-form-row clearfix even">
                 <label>厂家单价：</label>
                 <div class="jq-form-control">
                   <input class="easyui-numberbox" prefix="￥" value="0" id="Mobile_CJ_Price" name="Mobile_CJ_Price" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$',width:'100%',height:'35px'"/>
@@ -233,7 +255,6 @@
                   <span class="important">&nbsp;*&nbsp;</span>请严格填写
                 </span>
               </div>
-
 
               <div class="jq-form-row clearfix even">
                 <label>备注：</label>

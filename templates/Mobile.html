@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/static/WebStyle/green/css/providers1.css?{{ ver }}">
     <script type="text/javascript" src="/static/JS/function.js?{{ ver }}"></script>
 
-
 <style type="text/css">
 .messager-body{line-height:50px}.messager-window .messager-icon{margin-left:35px}.messager-window .messager-button{border-top:0;background:#fff}.jq-form{margin:10px;padding:0 9px;background:#f1f1f1;font-size:14px}.jq-form .jq-form-row{padding:0 165px;min-height:45px;line-height:45px}.jq-form .jq-form-row.jq-form-submit{height:80px;line-height:80px}.jq-form .jq-form-row.even{background:#fff}.jq-form .jq-form-row>label{float:left;margin-left:-165px;padding-left:30px;width:135px}.jq-form .jq-form-row .jq-form-control{float:left;width:100%}.jq-form .jq-form-row .jq-form-control .jq-form-input{width:100%;height:31px;padding:0 10px;box-sizing:border-box}.jq-form .jq-form-row .jq-form-control .jq-form-textarea{margin-top:10px;width:100%;height:110px;padding:5px;box-sizing:border-box}.jq-form .jq-form-row .jq-form-tip{float:right;margin-right:-165px;padding-left:20px;width:145px;color:#7f7f7f}.jq-form .jq-form-row .jq-form-tip .important{color:#df0000}.jq-form .jq-form-row.jq-form-time .textbox{width:auto!important;height:30px!important;line-height:30px!important}.jq-form .jq-form-row.jq-form-time .textbox-text{width:314px!important;height:30px!important;line-height:30px!important}
 p {padding: 4px 0 10px 4px;font-size: 14px}
@@ -38,10 +37,9 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
         </table>
       <div id="tb" style="padding:0 30px;">
         <form id="f1" method="post">
-          {% csrf_token %}
           <div class="conditions">
             <span class="con-span">订单号: </span><input class="easyui-textbox" type="text" name="Mobile_OrderNumber" style="width:166px;height:35px;line-height:35px;"></input>
-            <span class="con-span">承运商: </span>
+            <span class="con-sidpan">承运商: </span>
 			<input name="Carder_ID" class="easyui-combogrid" style="width:120px;height: 35px" data-options="
 					panelWidth: 500,
 					idField: 'ID',
@@ -85,9 +83,8 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
       </div>
       <div id="add" title="新增订单" style="width:718px;display:none;">
           <form id="f2" method="post">
-            {% csrf_token %}
-            <input type="hidden" name="Carder_Type" value="{% block Carder_Type_f2 %}{% endblock %}">
             <input type="hidden" id="ID" name="ID" value="">
+            <input type="hidden" id="EditType" name="EditType" value="">
             <div class="jq-form">
                 {% block input %} {% endblock %}
 
@@ -120,28 +117,73 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
 						}
 
         $('.add-row').on('click', function() {
+            //设置提交类别EditType为添加
+            $('#f2').form('reset');
+            $('#EditType').val('add');
             //弹出dialog
             showDialog('add', '增加资料');
-            //清除某ID下面所有文本框
-            clearInput('f2')
         })
 
-        // 修改
+        //修改某条记录
         $('.update-row').on('click', function() {
-            //设置提交类别EditType为添加
-        })
+          let SelectRow = $('#dg').datagrid('getSelected');
+          //设置提交类别EditType为添加
+          $('#EditType').val('edit');
+          if(!SelectRow){
+              $.messager.alert('操作失败','先选中需要操作的行。');
+              return false;
+          }
+          //将选中行的内容赋给各个输入框
+          for(let key in SelectRow){
+              if(['Carder_ID'].indexOf(key) != -1){
+                  console.log(SelectRow[key])
+                  $('#' + key).combogrid('setValue', SelectRow[key])
+              }else if(['Mobile_Goods_Count','Mobile_Goods_Square','Mobile_KG','Mobile_CJ_Price','Mobile_CJ_Other_Price','Mobile_CJ_Price_Count','Mobile_CB_Price','Mobile_CB_Other_Price','Mobile_CB_Price_Count'].indexOf(key) != -1){
+                  $('#' + key).numberbox('setValue', SelectRow[key])
+              }else {
+                  $('#' + key).val(SelectRow[key])
+              }
+          }
+            //弹出dialog
+            showDialog('add', '修改资料');
+        });
 
         $(function(){
             $('#dg').datagrid({
                 view: detailview,
                 detailFormatter: function(rowIndex, rowData){
+					return '<table>'+
+                            '<tr>'+
+                            '   <td style="border:0;padding-right:10px;width: 100px;height: 35px">订单号：</td>'+
+                            '   <td colspan="5" style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_OrderNumber + '</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                            '   <td style="border:0;padding-right:10px;width: 100px;height: 35px">承运商：</td>'+
+                            '   <td colspan="5" style="border:0;padding-right:10px;height: 35px">' + rowData.Carder_MarkName + '</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                            '   <td style="border:0;padding-right:10px;width: 100px;height: 35px">厂家单价：</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CJ_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">厂家送货费/其他费用:</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CJ_Other_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">厂家总价格:</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CJ_Price_Count + '￥</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">成本单价：</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CB_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">成本送货费/其他费用:</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CB_Other_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">成本总价格:</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CB_Price_Count + '￥</td>'+
+                            '</tr>'+
+							'</table>';
+
                 return '<table><tr>' +
                         '<td rowspan=2 style="border:0"><img src="/static/Images/demo.png" style="height:50px;"></td>' +
                         '<td style="border:0">' +
                         '<p>订单号: ' + rowData.Mobile_OrderNumber + '</p>' +
-                        '<p>收货人: ' + rowData.Mobile_Receive_Person + '</p>' +
-                        '<p>联系方式: ' + rowData.Mobile_Contact_Type + '</p>' +
-                        '<p>地址: ' + rowData.Mobile_Address + '</p>' +
+                        '<p>承运商: ' + rowData.Carder_MarkName + '</p>' +
                         '<p>开票信息: ' + rowData.Mobile_Tick_Info + '</p>' +
                         '<p>备注: ' + rowData.Mobile_Bak_Info + '</p>' +
                         '<p>时间: ' + rowData.DateTime + '</p>' +
@@ -167,7 +209,8 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
         function CheckPost(){
             $('#f1').form('submit', {
                 url:'/JSON/ad',
-                onSubmit: function(){
+                onSubmit: function(param){
+                    param.csrfmiddlewaretoken = '{{ csrf_token }}';
                     loading(1);
                 },
                 success:function(data){
@@ -182,8 +225,10 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
         function PostAddMobile() {
             $('#f2').form('submit', {
                 url:'/JSON/ae',
-                onSubmit: function(){
+                onSubmit: function(param){
+                    param.csrfmiddlewaretoken = '{{ csrf_token }}';
                     //开启进度条
+                    return $(this).form('validate');
                     loading(1);
                 },
                 success:function(data){
@@ -192,10 +237,14 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
                     data = JSON.parse(data);
                     console.log(data);
                     if(!data.err){
-                        //如果是添加动作，就向datagrid增加一条记录，不用刷新
-                        addRow('dg', data.data);
+                        if(data['data'].EditType=='add'){
+                            //如果是添加动作，就向datagrid增加一条记录，不用刷新
+                            addRow('dg', data.data);
+                        }else if(data['data'].EditType=='edit'){
+                            //否则如果是编辑动作，就更新刚才的那条选中的记录，不刷新
+                            updateRow('dg', data.data);
+                        }
                         $.messager.alert('操作成功','操作成功');
-                        {#$('#f2').form('clear');#}
                         $('#add').dialog('close')
                     }else{
                         $.messager.alert('操作失败',data.err);
@@ -237,5 +286,10 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
           $('.messager-window').find('.messager-icon').removeClass('messager-question').addClass('messager-error');
         })
     </script>
+{#<table>#}
+{#    <tr>#}
+{#        <td c></td>#}
+{#    </tr>#}
+{#</table>#}
 </body>
 </html>

@@ -192,10 +192,11 @@ var mainPlatform = {
                     '<span class="toggle-icon"></span>'+
                 '</h2><ul class="sider-nav">';
 
-        for(var i = 0, len = menu.menu.length; i < len; i++){
-        	var m = menu.menu[i],
+        for(var i = 0, len = menu.children.length; i < len; i++){
+        	var m = menu.children[i],
         		mstr = '';
         	var str = '';
+        	// console.log(m)
 
         	if(m.isCurrent){
         		if(m.children && m.children.length > 0) {
@@ -221,7 +222,9 @@ var mainPlatform = {
             var childStr = '';
             for(var j = 0, jlen = m.children.length; j < jlen; j++){
             	var child = m.children[j];
-            	var dataHref = (child.children && child.children.length > 0) ? '' : ('data-href="' + child.href + '"'); 
+            	// console.log(child)
+            	var dataHref = (child.children && child.children.length > 0) ? '' : ('data-href="' + child.href + '"');
+
             	if(child.isCurrent){
             		childStr += '<li class="active ' + (!dataHref ? 'no-child' : '') + '" text="'+ child.title +'" ' + dataHref + '><a href="#">'+ child.title +'</a>' + this._renderThreeLevelMenu(child.children) + '</li>';
             		$('.easyui-tabs1[arrindex='+ index +']').tabs('add',{

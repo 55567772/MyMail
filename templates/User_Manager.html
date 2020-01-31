@@ -1,1 +1,108 @@
-﻿
+﻿{% extends 'TableTemple.html' %}
+
+
+{# 网页标题 #}
+{% block title %}用户管理{% endblock %}
+
+{# 表格标题 #}
+{% block dg_title %}用户管理{% endblock %}
+
+{# 搜索地址 #}
+{% block search_url %}/JSON/ua{% endblock %}
+
+{# 保存地址 #}
+{% block save_url %}/JSON/ub{% endblock %}
+
+{# 删除地址 #}
+{% block delete_url %}/JSON/uc{% endblock %}
+
+
+{#头部搜索内容#}
+{% block dg_search %}
+          <div class="conditions">
+            <span class="con-span">用户名称: </span><input class="easyui-textbox" type="text" name="NickName" style="width:166px;height:35px;line-height:35px;"></input>
+            <a href="#" class="easyui-linkbutton search" iconCls="icon-search" data-options="selected:true">查询</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="$('#f1').form('reset');">重置</a>
+{#            <a href="#" class="easyui-linkbutton more" iconCls="icon-more">更多</a>#}
+          </div>
+
+{#          <div class="conditions hide">#}
+{#            <span class="con-span">公司代码: </span><input class="easyui-textbox" type="text" name="code" style="width:166px;height:35px;line-height:35px;"></input>#}
+{#          </div>#}
+
+          <div class="opt-buttons">
+            <a href="#" class="easyui-linkbutton add-row" iconCls="icon-add" data-options="selected:true">新增</a>
+            <a href="#" class="easyui-linkbutton update-row" iconCls="icon-edit">修改</a>
+            <a href="#" class="easyui-linkbutton delete-row" iconCls="icon-remove">删除</a>
+          </div>
+
+{% endblock %}
+
+{# 表格字段 #}
+{% block tr %}
+                <tr>
+                    <th data-options="field:'u'" width="100">帐号</th>
+                    <th data-options="field:'NickName'" width="100">姓名</th>
+                    <th data-options="field:'InGroup'" width="140">部门</th>
+                    <th data-options="field:'LoginTime'" width="140">登陆时间</th>
+                    <th data-options="field:'ID',formatter:Pur" width="120">权限分配</th>
+                </tr>
+{% endblock %}
+
+
+{# 表格增加/修改 字段 #}
+{% block input %}
+               <div class="jq-form-row clearfix">
+                <label>帐号：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="u" name="u" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>密码：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="p" name="p" type="password" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>姓名：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="NickName" name="NickName" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>所属部门：</label>
+                <div class="jq-form-control">
+                  <select class="jq-form-input" id="InGroup" name="InGroup">
+                    <option value="主管部">主管部</option>
+                    <option value="技术部">技术部</option>
+                    <option value="财务部">财务部</option>
+                    <option value="业务部">业务部</option>
+                  </select>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+{% endblock %}
+
+{# 额外的JS，按需加载 #}
+{% block other_script %}
+    <script type="text/javascript">
+        function Pur(value,row){
+                        return '<a href="/get_tpl/User_PurSetting.html?ID='+ row.ID +'&NickName='+ row.NickName+'" >设置权限</a>';
+                    }
+    </script>
+{% endblock %}

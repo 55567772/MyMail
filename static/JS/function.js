@@ -42,7 +42,7 @@ function deleteRow(dg) {
 function showDialog(div, title) {
     $('#'+ div).dialog({
         title: title,
-        cache: false,
+        cache: true,
         modal: true
     });
 }
@@ -52,3 +52,16 @@ function clearInput(divid)
 {
 	$("#"+divid+" :input").not(":button, :submit, :reset, :hidden").val("").removeAttr("checked").remove("selected");
 }
+
+// 用来获取URL后面的参数
+// 用法 getQuery("ID")
+function getQuery(variable){
+       let query = window.location.search.substring(1);
+       let vars = query.split("&");
+       for (let i=0;i<vars.length;i++) {
+               let pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return false;
+}
+

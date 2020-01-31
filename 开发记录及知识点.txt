@@ -1,36 +1,10 @@
-{# 载入头部 #}
-{%include 'head.html'%}
-
-
-{# 载入 EasyUI JS #}
-{% include 'head_easyui_js.html' %}
-
 拼音转换
 p = Pinyin()
 # print(p.get_initials("上海", ''))
-
-数据库操作：
-# ②：添加单条数据
-cur.execute("INSERT INTO test values(?,?,?)", (6, "zgq", 20))
-# ③：添加多条数据
-cur.executemany('INSERT INTO test VALUES (?,?,?)', [(3, 'name3', 19), (4, 'name4', 26)])
-(三) 更新数据（需要提交）
-# 方式一
-cur.execute("UPDATE test SET name=? WHERE id=?", ("nihao", 1))
-# 方式二
-cur.execute("UPDATE test SET name='haha' WHERE id=3")
-
-提交
-con.commit()
-回滚
-con.rollback()
-第五步：断开会话连接，释放资源
-# 关闭游标
-cur.close()
-# 断开数据库连接
-con.close()
 
 ---------------------------------
 解决session
 python manage.py migrate 
 
+解决CSRF
+param.csrfmiddlewaretoken = '{{ csrf_token }}';

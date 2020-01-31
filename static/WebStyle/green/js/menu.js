@@ -2,7 +2,7 @@ var SystemMenu = [{
 	title: '业务管理',
 	icon: '&#xe63f;',
 	isCurrent: true,
-	menu: [{
+	children: [{
 		title: '系统概况',
 		icon: '&#xe620;',
 		isCurrent: true,
