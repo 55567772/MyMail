@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>权限管理</title>
+    <link href="/static/WebStyle/green/css/base.css?{{ ver }}" rel="stylesheet">
+    <link rel="stylesheet" href="/static/custom/green/uimaker/easyui.css?{{ ver }}">
+    <link href="/static/WebStyle/green/css/process.css?{{ ver }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/custom/green/uimaker/icon.css?{{ ver }}">
+    <link href="/static/WebStyle/green/js/umeditor/themes/default/css/umeditor.css?{{ ver }}" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="/static/custom/green/jquery.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/custom/green/jquery.easyui.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/JS/function.js?{{ ver }}"></script>
+    <style>
+        .agreen{color:green;text-decoration : none}
+        .disagreen{color:red;text-decoration : none}
+
+    </style>
+</head> 
+<body>
+	<table title="权限管理" id="dg" class="easyui-treegrid" style="height:500px"
+			data-options="
+				url: '/JSON/pa?ID=' + getQuery('ID'),
+				method: 'get',
+				checkbox: true,
+				rownumbers: true,
+				idField: 'ID',
+				treeField: 'title'
+			">
+		<thead>
+			<tr>
+				<th data-options="field:'title'" width="250">功能模块</th>
+				<th data-options="field:'href'" width="300">页面地址</th>
+                <th data-options="field:'ID'" width="300">页面编号</th>
+                <th data-options="field:'Modify',formatter:Modify" width="300">修改权</th>
+{#                <th data-options="field:'Delete',formatter:Delete" width="300">删除权</th>#}
+			</tr>
+		</thead>
+	</table>
+          <div class="opt-buttons" style="padding-left: 20px;">
+            <a href="#" class="easyui-linkbutton add-row" iconCls="icon-add" data-options="selected:true">保存</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="window.history.back(-1)" data-options="selected:false">返回</a>
+            <apsn>当前用户：{{ args.NickName|escape }}</apsn>
+          </div>
+<script>
+    $('.add-row').on('click', function() {
+        let Pur = $('#dg').treegrid('getCheckedNodes');
+        loading(1)
+        $.post("/JSON/sb", { "Pur": JSON.stringify(Pur), "ID": getQuery('ID'), "csrfmiddlewaretoken":'{{ csrf_token }}'},
+           function(data){
+             console.log(data); //  2pm
+             loading(0)
+             $.messager.alert('操作成功',data.msg);
+           }, "json");
+    });
+
+    // 格式化
+    function Modify(value,row){
+        if(value=='0'){
+            return "<a href='#' class='disagreen' onclick='SetModify(this,"+ row.ID +")' ModuleCode='"+ row.ID +"'>✘不允许</a>";
+        }else{
+            return "<a href='#' class='agreen' onclick='SetModify(this,0)' ModuleCode='"+ row.ID +"'>✔已允许</a>";
+        }
+    }
+
+function SetModify(s,value){
+    var rowIndex = s.getAttribute("ModuleCode")
+    $('#dg').datagrid('updateRow',{
+        index: rowIndex,
+        row: {
+            Modify:value
+        }
+    });
+}
+</script>
+</body>
+</html>
+
+

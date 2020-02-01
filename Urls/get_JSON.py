@@ -46,6 +46,8 @@ def loop_pur_for_main(ParentID, auto_list=list, pur=[], isSuper=0):
     res = conn.sDB(sql)
     for row in res:
         row['children'] = loop_pur_for_main(row['ID'], [], pur, isSuper)
+        if row['title'] in ['首页', '业务管理']:
+            row['isCurrent'] = True
         if row['ID'] in pur['ID'] or row['children'] or isSuper:
             auto_list.append(row)
     return auto_list
@@ -63,7 +65,7 @@ def loop_pur_for_admin(ParentID, auto_list=list, pur={}):
     res = conn.sDB(sql)
     for row in res:
         # 修改权
-        row['Modify'] = True if row['ID'] in pur.get('Modify', []) else False
+        row['Modify'] = row['ID'] if row['ID'] in pur.get('Modify', []) else 0
 
         # 修删除
         row['Delete'] = True if row['ID'] in pur.get('Delete', []) else False
@@ -170,9 +172,7 @@ class GetJSON:
         if Mobile_Bak_Info:
             other_sql += "and Mobile_Bak_Info like '%{0}%'".format(Mobile_Bak_Info)
 
-        sql = 'Select *,' \
-              '(select top 1 Carder_MarkName from Carder where ID = dbo.Mobile.Carder_ID) as Carder_MarkName ' \
-              'from Mobile {0} order by ID desc'.format(other_sql)
+        sql = 'Select *, dbo.Get_CarderMarkName(Carder_ID) as Carder_MarkName from Mobile {0} order by ID desc'.format(other_sql)
         result = conn.sDB(sql)
         return str(json.dumps(result, cls=DateEncoder))
 
@@ -181,7 +181,10 @@ class GetJSON:
         Mobile_OrderNumber = "TC" + str(datetime.datetime.now().strftime('%Y%m%d%H%M%S%f'))
         DateTime = self.args.get('DateTime', datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S'))
         try:
-            print(self.args['EditType'])
+            # 根据ID取承运商名字
+            sql_1 = "select dbo.Get_CarderMarkName('{0}') as Carder_MarkName".format(int(self.args.get('Carder_ID', 0)))
+            self.args['Carder_MarkName'] = conn.sDB(sql_1)[0]['Carder_MarkName']
+
             if self.args['EditType'] == 'add':
                 sql = "INSERT INTO Mobile(" \
                      "Mobile_OrderNumber, Carder_ID, Mobile_Client, " \
@@ -190,9 +193,9 @@ class GetJSON:
                      "Mobile_Address, Mobile_Start_Address, Mobile_End_Address, " \
                      "Mobile_CJ_Price, Mobile_CJ_Other_Price, Mobile_CJ_Price_Count, " \
                      "Mobile_CB_Price, Mobile_CB_Other_Price, Mobile_CB_Price_Count, " \
-                     "Mobile_Clear_Type, Mobile_Make_Tick, DateTime) values " \
+                     "Mobile_Clear_Type, Mobile_Make_Tick, DateTime,AdminInfo, Mobile_Bak_Info) values " \
                      "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}'," \
-                     "'{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}')" \
+                     "'{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}')" \
                      .format(Mobile_OrderNumber,
                              int(self.args.get('Carder_ID', 0)),
                              safe(self.args.get('Mobile_Client', '')),
@@ -213,7 +216,10 @@ class GetJSON:
                              float(self.args.get('Mobile_CB_Price_Count', 0)),
                              safe(self.args.get('Mobile_Clear_Type', '')),
                              safe(self.args.get('Mobile_Make_Tick', '')),
-                             DateTime)
+                             DateTime,
+                             '[' + self.request.session['LoginInfo']['NickName'] +
+                             '] 新增于:' + datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S'),
+                             safe(self.args.get('Mobile_Bak_Info', '')))
                 print(sql)
                 conn.eDB(sql)
                 res_id = conn.sDB("select cast(IDENT_CURRENT('Carder') as nvarchar(20)) as ID")[0]
@@ -227,7 +233,8 @@ class GetJSON:
                       "Mobile_Address='{8}', Mobile_Start_Address='{9}', Mobile_End_Address='{10}', " \
                       "Mobile_CJ_Price='{11}', Mobile_CJ_Other_Price='{12}', Mobile_CJ_Price_Count='{13}', " \
                       "Mobile_CB_Price='{14}',Mobile_CB_Other_Price='{15}', Mobile_CB_Price_Count='{16}', " \
-                      "Mobile_Clear_Type='{17}', Mobile_Make_Tick='{18}', DateTime=GETDATE() where ID='{19}'"\
+                      "Mobile_Clear_Type='{17}', Mobile_Make_Tick='{18}', AdminInfo=AdminInfo + '{19}', " \
+                      "Mobile_Bak_Info='{20}' where ID='{21}'"\
                     .format(int(self.args.get('Carder_ID', 0)),
                             safe(self.args.get('Mobile_Client', '')),
                             safe(self.args.get('Mobile_Goods', '')),
@@ -247,6 +254,9 @@ class GetJSON:
                             float(self.args.get('Mobile_CB_Price_Count', 0)),
                             safe(self.args.get('Mobile_Clear_Type', '')),
                             safe(self.args.get('Mobile_Make_Tick', '')),
+                            '<br>[' + self.request.session['LoginInfo']['NickName'] +
+                            '] 编辑于:' + datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S'),
+                            safe(self.args.get('Mobile_Bak_Info', '')),
                             int(self.args.get('ID', 0)))
                 conn.eDB(sql)
                 return str(json.dumps({"err": False, "data": self.args}))
@@ -268,16 +278,17 @@ class GetJSON:
         all_element = list()
         pur = json.loads(self.request.session['LoginInfo']['Pur'])
         isSuper = self.request.session['LoginInfo']['isSuper']
-        # try:
-        sql = "Select [ID], [PageName] as title, [PageUrl] as href, [PageIcon] as icon " \
-              "From Page_Manager where [ParentID] = 0"
-        res = conn.sDB(sql)
-        for row in res:
-            if row['title'] in ['首页', '业务管理']:
-                row['isCurrent'] = True
-            row['children'] = loop_pur_for_main(row['ID'], [], pur, isSuper)
-            if row['ID'] in pur['ID'] or row['children'] or isSuper:
-                all_element.append(row)
+        all_element.extend(loop_pur_for_main(0, [], pur, isSuper))
+        # # try:
+        # sql = "Select [ID], [PageName] as title, [PageUrl] as href, [PageIcon] as icon " \
+        #       "From Page_Manager where [ParentID] = 0"
+        # res = conn.sDB(sql)
+        # for row in res:
+        #     if row['title'] in ['首页', '业务管理']:
+        #         row['isCurrent'] = True
+        #     row['children'] = loop_pur_for_main(row['ID'], [], pur, isSuper)
+        #     if row['ID'] in pur['ID'] or row['children'] or isSuper:
+        #         all_element.append(row)
         return "var SystemMenu = " + json.dumps(all_element)
 
     # 保存用户页面权限
@@ -291,12 +302,16 @@ class GetJSON:
             tmp_dict['ID'] = []
             # 储存页面地址
             tmp_dict['href'] = []
+            # 储存修改权限
+            tmp_dict['Modify'] = []
             for row in pur_json:
                 tmp_dict['ID'].append(row['ID'])
                 tmp_dict['href'].append(row['href'])
+                tmp_dict['Modify'].append(row['Modify'])
             sql = "update Admin set Pur = '{0}' where ID = {1}".format(json.dumps(tmp_dict), int(self.args['ID']))
+            print(sql)
             conn.eDB(sql)
-            return HttpResponse(json.dumps({"err": False, "msg": "成功保存"}))
+            return HttpResponse(json.dumps({"err": False, "msg": "成功保存1"}))
         except Exception as err:
             return HttpResponse(json.dumps({"err": True, "msg": str(err)}))
 

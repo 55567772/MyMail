@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link href="/static/WebStyle/green/css/base.css?{{ ver }}" rel="stylesheet">
+    <link rel="stylesheet" href="/static/custom/green/uimaker/easyui.css?{{ ver }}">
+    <link rel="stylesheet" type="text/css" href="/static/custom/green/uimaker/icon.css?{{ ver }}">
+    <link rel="stylesheet" href="/static/WebStyle/green/css/providers1.css?{{ ver }}">
+    <script type="text/javascript" src="/static/JS/function.js?{{ ver }}"></script>
+<style type="text/css">
+.messager-body{line-height:50px}.messager-window .messager-icon{margin-left:35px}.messager-window .messager-button{border-top:0;background:#fff}.jq-form{margin:10px;padding:0 9px;background:#f1f1f1;font-size:14px}.jq-form .jq-form-row{padding:0 165px;min-height:45px;line-height:45px}.jq-form .jq-form-row.jq-form-submit{height:80px;line-height:80px}.jq-form .jq-form-row.even{background:#fff}.jq-form .jq-form-row>label{float:left;margin-left:-165px;padding-left:30px;width:135px}.jq-form .jq-form-row .jq-form-control{float:left;width:100%}.jq-form .jq-form-row .jq-form-control .jq-form-input{width:100%;height:31px;padding:0 10px;box-sizing:border-box}.jq-form .jq-form-row .jq-form-control .jq-form-textarea{margin-top:10px;width:100%;height:110px;padding:5px;box-sizing:border-box}.jq-form .jq-form-row .jq-form-tip{float:right;margin-right:-165px;padding-left:20px;width:145px;color:#7f7f7f}.jq-form .jq-form-row .jq-form-tip .important{color:#df0000}.jq-form .jq-form-row.jq-form-time .textbox{width:auto!important;height:30px!important;line-height:30px!important}.jq-form .jq-form-row.jq-form-time .textbox-text{width:314px!important;height:30px!important;line-height:30px!important}
+</style>
+</head>
+<body>
+    <div class="container">
+       <table id="dg" style="width:100%;height:529px" title="{% block dg_title %}{% endblock %}" data-options="
+                rownumbers:true,
+                singleSelect:true,
+                autoRowHeight:false,
+                pagination:true,
+                fitColumns:true,
+                striped:true,
+{#                checkOnSelect:false,#}
+{#                selectOnCheck:true,#}
+                collapsible:true,
+                toolbar:'#tb',
+                pageSize:10">
+            <thead>
+            {% block tr %} {% endblock %}
+            </thead>
+        </table>
+      <div id="tb" style="padding:0 30px;">
+        <form id="f1" method="post">
+{#          头部搜索内容#}
+          {% block dg_search %}{% endblock %}
+       </form>
+      </div>
+      <div id="add" title="增加数据" style="width:718px;display:none;">
+          <form id="f2" method="post">
+            <input type="hidden" id="EditType" name="EditType" value="">
+            <input type="hidden" name="Carder_Type" value="{% block Carder_Type_f2 %}{% endblock %}">
+            <input type="hidden" id="ID" name="ID" value="">
+            <div class="jq-form">
+
+                {# 录入字段列表 #}
+                {% block input %} {% endblock %}
+            
+              <div class="jq-form-row clearfix jq-form-submit">
+                <div class="jq-form-control">
+                  <a href="#" onclick="PostAddCarder();" class="easyui-linkbutton" data-options="selected:true,">确定</a>
+                  <a href="#" onclick="$('#add').dialog('close')" class="easyui-linkbutton">关闭</a>
+                </div>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="/static/custom/green/jquery.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/custom/green/jquery.easyui.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/custom/green/easyui-lang-zh_CN.js?{{ ver }}"></script>
+
+    {#  加载datagrid自动分页代码  #}
+    <script type="text/javascript" src="/static/JS/datagrids_auto_page.js?{{ ver }}"></script>
+
+    <script type="text/javascript">
+
+        $('.add-row').on('click', function() {
+            //设置提交类别EditType为添加
+            $('#EditType').val('add');
+            //弹出dialog
+            showDialog('add', '增加资料');
+            //清除某ID下面所有文本框
+            clearInput('f2')
+        })
+
+        $(function(){
+            $('#dg').datagrid();
+            //页面载入时加载远程内容
+            CheckSearch();
+        });
+
+
+        $(".more").click(function(){
+            $(this).closest(".conditions").siblings().toggleClass("hide");
+        });
+
+        // 当查询按钮点击
+        $(".search").click(function(){
+            CheckSearch();
+        });
+
+        //查询承运商
+        function CheckSearch(){
+            $('#f1').form('submit', {
+                url:'{% block search_url %}{% endblock %}',
+                onSubmit: function(param){
+                    param.csrfmiddlewaretoken = '{{ csrf_token }}';
+                    loading(1);
+                },
+                success:function(data){
+                    {#console.log(data)#}
+                    $('#dg').datagrid({data: JSON.parse(data)}).datagrid('clientPaging');
+                    loading(0)
+                }
+            });
+        }
+
+        // 提交操作
+        function PostAddCarder() {
+            $('#f2').form('submit', {
+                url:'{% block save_url %}{% endblock %}',
+                onSubmit: function(param){
+                    param.csrfmiddlewaretoken = '{{ csrf_token }}';
+                    //开启进度条
+                    loading(1);
+                },
+                success:function(data){
+                    //关闭进度条
+                    loading(0)
+                    data = JSON.parse(data);
+                    console.log(data);
+                    if(!data.err){
+                        if(data['data'].EditType=='add'){
+                            //如果是添加动作，就向datagrid增加一条记录，不用刷新
+                            addRow('dg', data.data);
+                        }else if(data['data'].EditType=='edit'){
+                            //否则如果是编辑动作，就更新刚才的那条选中的记录，不刷新
+                            updateRow('dg', data.data);
+                        }
+                        $.messager.alert('操作成功','操作成功');
+                        {#$('#f2').form('clear');#}
+                        $('#add').dialog('close')
+                    }else{
+                        $.messager.alert('操作失败',data.err);
+                    }
+                }
+            });
+        }
+
+        //修改某条记录
+        $('.update-row').on('click', function() {
+          let SelectRow = $('#dg').datagrid('getSelected');
+          //设置提交类别EditType为添加
+          $('#EditType').val('edit');
+          if(!SelectRow){
+              $.messager.alert('操作失败','先选中需要操作的行。');
+              return false;
+          }
+          //将选中行的内容赋给各个输入框
+          for(let key in SelectRow){
+              $('#' + key).val(SelectRow[key])
+          }
+            //弹出dialog
+            showDialog('add', '修改资料');
+        });
+
+        //删除某条记录
+        $('.delete-row').on('click', function() {
+          let row = $('#dg').datagrid('getSelected');
+          {#console.log(row)#}
+          if(!row){
+              $.messager.alert('操作失败','先选中需要操作的行。');
+              return false;
+          }
+          $.messager.confirm({
+            title: '提示信息',
+            ok: '确定',
+            icon: 'error',
+            cancel: '取消',
+            msg: '你确定要删除选中记录？',
+            fn: function(r) {
+              if(r) {
+                $.getJSON("{% block delete_url %}{% endblock %}", { ID: row.ID }, function(data){
+                    if(!data.err) {
+                        //删除指定行
+                        deleteRow('dg');
+                 }else {
+                   $.messager.alert('操作失败',data.err);
+                 }
+                });
+              } else {
+                console.log('NO');
+              }
+            }
+          });
+          $('.messager-window').find('.l-btn-small').eq(0).addClass('l-btn-selected');
+          $('.messager-window').find('.messager-icon').removeClass('messager-question').addClass('messager-error');
+        })
+    </script>
+
+{# 额外的JS，由外部按需加载 #}
+{% block other_script %}{% endblock %}
+</body>
+</html>

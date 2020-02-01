@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -57,8 +56,10 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
 					]],
 					fitColumns: true
 				">
-            <span class="con-span">客户: </span><input class="easyui-textbox" type="text" name="Mobile_Client" style="width:120px;height:35px;line-height:35px;"></input>
-            <span class="con-span">备注: </span><input class="easyui-textbox" type="text" name="Mobile_Bak_Info" style="width:120px;height:35px;line-height:35px;"></input>
+            <span class="con-span">客户: </span><label>
+              <input class="easyui-textbox" type="text" name="Mobile_Client" style="width:120px;height:35px;line-height:35px;"></input>
+          </label>
+              <span class="con-span">备注: </span><input class="easyui-textbox" type="text" name="Mobile_Bak_Info" style="width:120px;height:35px;line-height:35px;"></input>
             <a href="#" class="easyui-linkbutton search" iconCls="icon-search" data-options="selected:true">查询</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="$('#f1').form('reset');">重置</a>
 {#            <a href="#" class="easyui-linkbutton more" iconCls="icon-more">更多</a>#}
@@ -72,8 +73,10 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
 {#          </div>#}
           <div class="opt-buttons">
             <a href="#" class="easyui-linkbutton add-row" iconCls="icon-add" data-options="selected:true">新增</a>
+            {% if PageID in Pur.Modify %}
             <a href="#" class="easyui-linkbutton update-row" iconCls="icon-edit">修改</a>
             <a href="#" class="easyui-linkbutton delete-row" iconCls="icon-remove">删除</a>
+            {% endif %}
 {#            <a href="#" class="easyui-linkbutton">发布</a>#}
 {#            <a href="#" class="easyui-linkbutton">取消发布</a>#}
 {#            <a href="#" class="easyui-linkbutton">标记为执行完毕</a>#}
@@ -177,18 +180,15 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
                             '   <td style="border:0;padding-right:10px;height: 35px">成本总价格:</td>'+
                             '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CB_Price_Count + '￥</td>'+
                             '</tr>'+
+                            '<tr>'+
+                            '   <td style="border:0;padding-right:10px;width: 100px;height: 35px">备注信息：</td>'+
+                            '   <td colspan="5" style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_Bak_Info + '</td>'+
+                            '</tr>'+
+                            '<tr>'+
+                            '   <td style="border:0;padding-right:10px;width: 100px;height: 35px">订单变动 ：</td>'+
+                            '   <td colspan="5" style="border:0;padding-right:10px;height: 35px">' + rowData.AdminInfo + '</td>'+
+                            '</tr>'+
 							'</table>';
-
-                return '<table><tr>' +
-                        '<td rowspan=2 style="border:0"><img src="/static/Images/demo.png" style="height:50px;"></td>' +
-                        '<td style="border:0">' +
-                        '<p>订单号: ' + rowData.Mobile_OrderNumber + '</p>' +
-                        '<p>承运商: ' + rowData.Carder_MarkName + '</p>' +
-                        '<p>开票信息: ' + rowData.Mobile_Tick_Info + '</p>' +
-                        '<p>备注: ' + rowData.Mobile_Bak_Info + '</p>' +
-                        '<p>时间: ' + rowData.DateTime + '</p>' +
-                        '</td>' +
-                    '</tr></table>';
                 }
             });
             //页面载入时加载远程内容
