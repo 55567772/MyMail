@@ -10,6 +10,7 @@ from xpinyin import Pinyin
 import datetime
 import decimal
 from Codes import Functions
+import time
 
 
 conn = MSSQL()
@@ -84,6 +85,17 @@ class GetJSON:
         self.args = args.copy()
         self.request = request
 
+    # 判断是否为时间格式
+    def isDate(self, date):
+        try:
+            if ":" in date:
+                time.strptime(date, "%Y-%m-%d %H:%M:%S")
+            else:
+                time.strptime(date, "%Y-%m-%d")
+            return True
+        except:
+            return False
+
     # 查询承运商列表
     def aa(self):
         other_sql = "where 1=1 "
@@ -157,11 +169,16 @@ class GetJSON:
 
     # 查询订单
     def ad(self):
+        all_result = dict()
+        footer = dict()
         other_sql = "where 1=1 "
         Mobile_OrderNumber = "%s" % safe(self.args.get('Mobile_OrderNumber', '').strip().replace("'", ""))
         Carder_ID = "%s" % safe(self.args.get('Carder_ID', '').strip().replace("'", ""))
         Mobile_Client = "%s" % safe(self.args.get('Mobile_Client', '').strip().replace("'", ""))
         Mobile_Bak_Info = "%s" % safe(self.args.get('Mobile_Bak_Info', '').strip().replace("'", ""))
+        sTime = self.args.get('sTime', '') if self.isDate(self.args.get('sTime', '')) else ''
+        eTime = self.args.get('eTime', '') if self.isDate(self.args.get('eTime', '')) else ''
+        month = int(self.args.get('month', 0)) if self.args.get('month', 0) else 0
 
         if Mobile_OrderNumber:
             other_sql += "and Mobile_OrderNumber like '%{0}%'".format(Mobile_OrderNumber)
@@ -171,10 +188,33 @@ class GetJSON:
             other_sql += "and Mobile_Client like '%{0}%'".format(Mobile_Client)
         if Mobile_Bak_Info:
             other_sql += "and Mobile_Bak_Info like '%{0}%'".format(Mobile_Bak_Info)
+        if sTime:
+            other_sql += "and DateDiff(d,'{0}', DateTime)>=0".format(sTime)
+        if eTime:
+            other_sql += "and DateDiff(d,DateTime,'{0}')>=0".format(eTime)
+        if month:
+            other_sql += "and month(DateTime)={0} and year(DateTime)=year(GETDATE())".format(month)
+        # print(other_sql)
 
         sql = 'Select *, dbo.Get_CarderMarkName(Carder_ID) as Carder_MarkName from Mobile {0} order by ID desc'.format(other_sql)
         result = conn.sDB(sql)
-        return str(json.dumps(result, cls=DateEncoder))
+        # 为footer计算总和，下面罗列需要统计的字段
+        fields_total = dict()
+        fields = ['Mobile_Goods_Count', 'Mobile_Goods_Square', 'Mobile_KG',
+                  'Mobile_CJ_Other_Price', 'Mobile_CJ_Price_Count', 'Mobile_CB_Other_Price', 'Mobile_CB_Price_Count']
+        for row in result:
+            for f in fields:
+                fields_total[f] = fields_total.get(f, 0) + row[f]
+        # print(fields_total)
+        # 脚部数据
+        for k, v in fields_total.items():
+            footer[k] = v
+        footer['DateTime'] = "统计"
+        # 组合所有数据
+        all_result['total'] = len(result)
+        all_result['rows'] = result
+        all_result['footer'] = [footer]
+        return str(json.dumps(all_result, cls=DateEncoder))
 
     # 添加，修改 订单
     def ae(self):
@@ -234,7 +274,7 @@ class GetJSON:
                       "Mobile_CJ_Price='{11}', Mobile_CJ_Other_Price='{12}', Mobile_CJ_Price_Count='{13}', " \
                       "Mobile_CB_Price='{14}',Mobile_CB_Other_Price='{15}', Mobile_CB_Price_Count='{16}', " \
                       "Mobile_Clear_Type='{17}', Mobile_Make_Tick='{18}', AdminInfo=AdminInfo + '{19}', " \
-                      "Mobile_Bak_Info='{20}' where ID='{21}'"\
+                      "Mobile_Bak_Info='{20}',Mobile_isModify=1 where ID='{21}'"\
                     .format(int(self.args.get('Carder_ID', 0)),
                             safe(self.args.get('Mobile_Client', '')),
                             safe(self.args.get('Mobile_Goods', '')),
@@ -262,6 +302,12 @@ class GetJSON:
                 return str(json.dumps({"err": False, "data": self.args}))
         except Exception as err:
             return str(json.dumps({"err": str(err)}))
+
+    # 首页的一些统计
+    def af(self):
+        # 统计承运商数量
+        sql = "select"
+        pass
 
     # 删除订单
     @csrf_exempt
@@ -324,7 +370,7 @@ class GetJSON:
         if NickName:
             other_sql += "and NickName like '%{0}%'".format(NickName)
 
-        sql = 'Select * from Admin {0} order by ID DESC '.format(other_sql)
+        sql = 'Select * from Admin {0}'.format(other_sql)
         result = conn.sDB(sql)
         return str(json.dumps(result, cls=DateEncoder))
 
@@ -360,7 +406,7 @@ class GetJSON:
     @csrf_exempt
     def uc(self):
         try:
-            conn.eDB("DELETE FROM Admin WHERE ID = '{0}'".format(int(self.args['ID'])))
+            conn.eDB("DELETE FROM Admin WHERE isSuper<>1 and ID = '{0}'".format(int(self.args['ID'])))
             return str(json.dumps({"err": False, "data": "ok"}))
         except Exception as err:
             return str(json.dumps({"err": str(err)}))
@@ -376,7 +422,32 @@ class GetJSON:
             all_element.extend(loop_pur_for_admin(0, [], pur))
             return json.dumps(all_element)
         except Exception as err:
-            return json.dumps(json.dumps({"err": True, "msg": str(err)}))
+            return json.dumps({"err": True, "msg": str(err)})
+
+    # 修改用户密码
+    @csrf_exempt
+    def pb(self):
+        if self.request.session.get('LoginInfo', ''):
+            try:
+                p = safe(self.args.get('p', '').strip())
+                u = self.request.session['LoginInfo']['u']
+                sql = "update Admin set p='{0}' where u='{1}'".format(p, u)
+                # print(sql)
+                conn.eDB(sql)
+                return json.dumps({"err": False, "msg": "ok"})
+            except Exception as err:
+                return json.dumps({"err": True, "msg": str(err)})
+        else:
+            return json.dumps({"err": True, "msg": "无权限"})
+
+    # 安全退出
+    @csrf_exempt
+    def pc(self):
+        if self.request.session.get('LoginInfo', ''):
+            del self.request.session['LoginInfo']
+            return json.dumps({"err": False, "msg": "已退出1"})
+        else:
+            return json.dumps({"err": False, "msg": "已退出2"})
 
     # 登陆验证
     def lo(self):

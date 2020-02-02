@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import datetime
+import time
 
-
-a={"functions":"<input type='checkbox' onclick='selectValue(this)' ModuleCode='02001' parname='机构信息设置' name='01' checked='true' />"}
-print('true' in a['functions'])
+a = b = 1
+a = a + 1
+print(b,a)

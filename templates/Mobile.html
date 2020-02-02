@@ -18,7 +18,7 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
 </head>
 <body>
     <div class="container">
-       <table id="dg" style="width:100%;height:529px" title="订单列表" data-options="
+       <table id="dg" style="width:100%;height:auto" title="订单列表" data-options="
                 rownumbers:true,
                 singleSelect:true,
                 autoRowHeight:false,
@@ -29,7 +29,12 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
 {#                selectOnCheck:true,#}
                 collapsible:true,
                 toolbar:'#tb',
-                pageSize:10">
+                pageSize:10,
+                rowStyler: function(index,row){
+					if (row.Mobile_isModify == 1){
+						return 'background-color:#c16969;color:#fff;font-weight:bold;';
+					}
+				}">
             <thead>
             {% block tr %} {% endblock %}
             </thead>
@@ -166,19 +171,19 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
                             '</tr>'+
                             '<tr>'+
                             '   <td style="border:0;padding-right:10px;width: 100px;height: 35px">厂家单价：</td>'+
-                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CJ_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">￥' + rowData.Mobile_CJ_Price + '</td>'+
                             '   <td style="border:0;padding-right:10px;height: 35px">厂家送货费/其他费用:</td>'+
-                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CJ_Other_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">￥' + rowData.Mobile_CJ_Other_Price + '</td>'+
                             '   <td style="border:0;padding-right:10px;height: 35px">厂家总价格:</td>'+
-                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CJ_Price_Count + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">￥' + rowData.Mobile_CJ_Price_Count + '</td>'+
                             '</tr>'+
                             '<tr>'+
                             '   <td style="border:0;padding-right:10px;height: 35px">成本单价：</td>'+
-                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CB_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">￥' + rowData.Mobile_CB_Price + '</td>'+
                             '   <td style="border:0;padding-right:10px;height: 35px">成本送货费/其他费用:</td>'+
-                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CB_Other_Price + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">￥' + rowData.Mobile_CB_Other_Price + '</td>'+
                             '   <td style="border:0;padding-right:10px;height: 35px">成本总价格:</td>'+
-                            '   <td style="border:0;padding-right:10px;height: 35px">' + rowData.Mobile_CB_Price_Count + '￥</td>'+
+                            '   <td style="border:0;padding-right:10px;height: 35px">￥' + rowData.Mobile_CB_Price_Count + '</td>'+
                             '</tr>'+
                             '<tr>'+
                             '   <td style="border:0;padding-right:10px;width: 100px;height: 35px">备注信息：</td>'+

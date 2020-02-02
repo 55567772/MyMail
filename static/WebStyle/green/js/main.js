@@ -114,13 +114,16 @@ var mainPlatform = {
         		cancel: '取消',
         		msg: '你确定要退出系统吗？',
         		fn: function(r) {
-
         			if(r) {
-
-        				window.location.href = 'login.html';
-
+						$.post("/JSON/pc", { "p": r,"csrfmiddlewaretoken": "{{ csrf_token }}" },
+						   function(data){
+							if(data.err){
+								$.messager.alert('提示','退出失败!','error');
+							}else{
+								window.location.href = '/';
+							}
+						   }, "json");
         			}
-
         		}
         	});
         	$('.messager-window').find('.l-btn-small').eq(0).addClass('l-btn-selected');

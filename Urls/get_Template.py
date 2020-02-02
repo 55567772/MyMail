@@ -1,9 +1,13 @@
 # coding: utf-8
 from django.shortcuts import render
 from django.views.decorators.clickjacking import xframe_options_exempt, xframe_options_sameorigin, xframe_options_deny
-import datetime
+import datetime, time
 import json
 from Codes import MSSQL
+
+
+def main(request):
+    return render(request, "login.html", context={"err": 'Hello World'})
 
 
 @xframe_options_exempt
@@ -26,8 +30,12 @@ def redirect(request, page_name):
             return render(request, '404.html', context={"err": '无权限'})
     else:
         PageID = 0
-    print(PageID, pur)
     try:
+        # 根据页面不同，提交一些额外数据
+        other_dic = {}
+        if page_name in ['Mobile_Detail_Client.html', 'Mobile_Detail_Carder.html']:
+            m = int(time.strftime("%m", time.localtime()))
+            other_dic = {"Month": [m for m in range(1, m + 1)]}
         return render(request, page_name,
                       context={
                           # 登陆信息
@@ -40,6 +48,8 @@ def redirect(request, page_name):
                           "DateTime": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                           # 传入前端的参数
                           "args": args,
+                          # 根据页面不同，提交一些额外数据
+                          "other_dic": other_dic,
                           # 版本号
                           "ver": "20200201",
                       })

@@ -13,15 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+# from django.contrib import admin
 from django.urls import path, include, re_path
 from Urls import get_Template, get_JSON
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', admin.site.urls),
+    path('', get_Template.main),
     # 获取JSON信息
     re_path(r'JSON/(?P<key>[a-z]{0,2})$', get_JSON.redirect, name='JSON'),
     # 模板调用
-    re_path(r'get_tpl/(?P<page_name>[\w.]{0,20})$', get_Template.redirect, name='get_tpl_mo'),
+    re_path(r'get_tpl/(?P<page_name>[\w.]{0,30})$', get_Template.redirect, name='get_tpl_mo'),
 ]

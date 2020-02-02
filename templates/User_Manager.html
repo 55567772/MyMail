@@ -1,4 +1,4 @@
-﻿{% extends 'TableTemple.html' %}
+{% extends 'TableTemple.html' %}
 
 
 {# 网页标题 #}
@@ -102,7 +102,11 @@
 {% block other_script %}
     <script type="text/javascript">
         function Pur(value,row){
-                        return '<a href="/get_tpl/User_PurSetting.html?ID='+ row.ID +'&NickName='+ row.NickName+'" >设置权限</a>';
-                    }
+            if(row.isSuper){
+                return '超级管理员';
+            }else{
+                return '<a href="/get_tpl/User_PurSetting.html?ID='+ row.ID +'&NickName='+ row.NickName+'" >设置权限</a>';
+            }
+        }
     </script>
 {% endblock %}

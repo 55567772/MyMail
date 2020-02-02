@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/templates/Mobile_Detail_Carder.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/Mobile_Detail_Client.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/Mobile_Manager.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/input_carder_zc.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/input_carder_zx.html" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
