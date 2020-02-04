@@ -1,0 +1,303 @@
+{% extends "Mobile_Detail.html" %}
+
+
+{% block dg_title %}承运商帐单汇总{% endblock %}
+
+{# 头部查询框 #}
+{% block search_input %} 
+          <div class="conditions">
+            <span class="con-sidpan">承运商: </span>
+			<input name="Carder_ID" class="easyui-combogrid" style="width:120px;height: 35px" data-options="
+					panelWidth: 500,
+					idField: 'ID',
+					textField: 'Carder_MarkName',
+					url: '/JSON/aa',
+					method: 'get',
+                    mode: 'remote',
+                    remoteSort:false,
+                    multiSort:true,
+					columns: [[
+						{field:'ID',title:'编号',width:80,sortable:true},
+						{field:'Carder_MarkName',title:'承运商',width:100,sortable:true},
+						{field:'Carder_Mobile',title:'联系电话',width:100,sortable:true},
+						{field:'Carder_Type',title:'承运商类型',width:100,sortable:true}
+					]],
+					fitColumns: true
+				">
+              <span class="con-span">开始时间: </span>
+              <input id="sTime" name="sTime" class="easyui-datebox" style="width:160px;height:35px;line-height:35px;" data-options=""/>
+              <span class="con-span">结束时间: </span>
+              <input id="eTime" name="eTime" class="easyui-datebox" style="width:160px;height:35px;line-height:35px;" data-options=""/>
+            <a href="#" class="easyui-linkbutton search" iconCls="icon-search" data-options="selected:true">查询</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="$('#f1').form('reset');">重置</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-redo" onclick="$('#dg').datagrid('toExcel','dg.xls')">导出</a>
+          </div>
+
+{% endblock %}
+
+{% block tr %}
+                <tr>
+                    <th data-options="field:'DateTime', width:130">日期</th>
+                    <th data-options="field:'Mobile_Client', width:80">客户</th>
+                    <th data-options="field:'Mobile_Goods', width:80">货品</th>
+                    <th data-options="field:'Mobile_Goods_Count', width:70">数量</th>
+                    <th data-options="field:'Mobile_Goods_Square', width:70">方数</th>
+                    <th data-options="field:'Mobile_KG', width:100,formatter:format_KG, width:80">重量</th>
+                    <th data-options="field:'Mobile_Receive_Person', width:100">收货人</th>
+                    <th data-options="field:'Mobile_Contact_Type', width:100">联系方式</th>
+                    <th data-options="field:'Mobile_Address', width:200">地址</th>
+{#                    <th data-options="field:'Mobile_Start_Address', width:80">起运地</th>#}
+{#                    <th data-options="field:'Mobile_End_Address', width:80">目的地</th>#}
+{#                    <th data-options="field:'Mobile_CJ_Price', width:80,formatter:format_money">厂家单价</th>#}
+{#                    <th data-options="field:'Mobile_CJ_Other_Price', width:80,formatter:format_money">厂家送货费<BR>其他费用</th>#}
+{#                    <th data-options="field:'Mobile_CJ_Price_Count', width:100,formatter:format_money">厂家总价格</th>#}
+                    <th data-options="field:'Mobile_CB_Price', width:100,formatter:format_money">成本单价</th>
+                    <th data-options="field:'Mobile_CB_Other_Price', width:100,formatter:format_money">成本送货费<BR>其他费用</th>
+                    <th data-options="field:'Mobile_CB_Price_Count', width:100,formatter:format_money">成本总价格</th>
+                    <th data-options="field:'Mobile_Clear_Type', width:80">结算方式</th>
+{#                    <th data-options="field:'Mobile_Make_Tick', width:80">客户<br>是否开票</th>#}
+{#                    <th data-options="field:'Mobile_GPS', width:100">GPS</th>#}
+{#                    <th data-options="field:'Mobile_Tick_Info', width:100">开票信息</th>#}
+                    <th data-options="field:'Mobile_Bak_Info', width:100">备注</th>
+                </tr>
+{% endblock %}
+
+{% block input %}
+            <div style="height:300px;overflow-y: scroll;">
+              <div class="jq-form-row jq-form-time clearfix even">
+                <label>发布时间：</label>
+                <div class="jq-form-control">
+                  <input id="DateTime" name="DateTime" class="easyui-datetimebox"  data-options="value:'{{DateTime}}'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+               <div class="jq-form-row clearfix">
+                <label>承运商：</label>
+                <div class="jq-form-control">
+			    <input id="Carder_ID" name="Carder_ID" class="easyui-combogrid" style="width:100%;height: 35px" data-options="
+					panelWidth: 500,
+					idField: 'ID',
+					textField: 'Carder_MarkName',
+					url: '/JSON/aa',
+					method: 'get',
+                    mode: 'remote',
+                    remoteSort:false,
+                    multiSort:true,
+                    required:true,
+					columns: [[
+						{field:'ID',title:'编号',width:80,sortable:true},
+						{field:'Carder_MarkName',title:'承运商',width:100,sortable:true},
+						{field:'Carder_Mobile',title:'联系电话',width:100,sortable:true},
+						{field:'Carder_Type',title:'承运商类型',width:100,sortable:true}
+					]],
+					fitColumns: true
+				">
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>客户：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Client" name="Mobile_Client" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+              <div class="jq-form-row clearfix even">
+                <label>货品：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Goods" name="Mobile_Goods" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>数量：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" value="0" id="Mobile_Goods_Count" name="Mobile_Goods_Count" data-options="precision:1,decimalSeparator:'.',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>方数：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" value="0" id="Mobile_Goods_Square" name="Mobile_Goods_Square" data-options="precision:2,decimalSeparator:'.',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix">
+                <label>重量：</label>
+                <div class="jq-form-control">
+{#                  <input class="jq-form-input" id="Carder_KG" name="Carder_KG" type="text" />#}
+                  <input class="easyui-numberbox" value="0" id="Mobile_KG" name="Mobile_KG" data-options="precision:2,decimalSeparator:'.',suffix:' KG',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>收货人：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Receive_Person" name="Mobile_Receive_Person" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+
+              <div class="jq-form-row clearfix even">
+                <label>联系方式：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Contact_Type" name="Mobile_Contact_Type" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>地址：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Address" name="Mobile_Address" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>起运地：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Start_Address" name="Mobile_Start_Address" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>目的地：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_End_Address" name="Mobile_End_Address" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+              <div class="jq-form-row clearfix even">
+                <label>厂家单价：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" prefix="￥" value="0" id="Mobile_CJ_Price" name="Mobile_CJ_Price" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>厂家送货/其他费用：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" prefix="￥" value="0" id="Mobile_CJ_Other_Price" name="Mobile_CJ_Other_Price" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>厂家总价格：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" prefix="￥" value="0" id="Mobile_CJ_Price_Count" name="Mobile_CJ_Price_Count" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>成本单价：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" prefix="￥" value="0" id="Mobile_CB_Price" name="Mobile_CB_Price" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>厂家送货/其他费用：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" prefix="￥" value="0" id="Mobile_CB_Other_Price" name="Mobile_CB_Other_Price" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>成本总价格：</label>
+                <div class="jq-form-control">
+                  <input class="easyui-numberbox" prefix="￥" value="0" id="Mobile_CB_Price_Count" name="Mobile_CB_Price_Count" data-options="precision:2,groupSeparator:',',decimalSeparator:'.',prefix:'$',width:'100%',height:'35px'"/>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>结算方式：</label>
+                <div class="jq-form-control">
+                  <select class="jq-form-input" id="Mobile_Clear_Type" name="Mobile_Clear_Type">
+                    <option value="月结">月结</option>
+                    <option value="预付">预付</option>
+                    <option value="到付">到付</option>
+                    <option value="其他">其他</option>
+                  </select>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>客户是否开票：</label>
+                <div class="jq-form-control">
+                  <select class="jq-form-input" id="Mobile_Make_Tick" name="Mobile_Make_Tick">
+                    <option value="开票">开票</option>
+                    <option value="不开票">不开票</option>
+                  </select>
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>备注：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Mobile_Bak_Info" name="Mobile_Bak_Info" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+            </div>
+{% endblock %}

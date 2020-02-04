@@ -4,7 +4,7 @@
 {% block tr %}
                 <tr>
                     <th data-options="field:'DateTime', width:180">日期</th>
-{#                    <th data-options="field:'Carder_MarkName', width:100">承运商</th>#}
+                    <th data-options="field:'Carder_MarkName', width:100">承运商</th>
                     <th data-options="field:'Mobile_Client', width:100">客户</th>
                     <th data-options="field:'Mobile_Goods', width:100">货品</th>
                     <th data-options="field:'Mobile_Goods_Count', width:80">数量</th>
@@ -15,17 +15,17 @@
                     <th data-options="field:'Mobile_Address', width:200">地址</th>
                     <th data-options="field:'Mobile_Start_Address', width:80">起运地</th>
                     <th data-options="field:'Mobile_End_Address', width:80">目的地</th>
-{#                    <th data-options="field:'Mobile_CJ_Price', width:100,formatter:format_money">厂家单价</th>#}
-{#                    <th data-options="field:'Mobile_CJ_Other_Price', width:100,formatter:format_money">厂家送货费<BR>其他费用</th>#}
-{#                    <th data-options="field:'Mobile_CJ_Price_Count', width:100,formatter:format_money">厂家总价格</th>#}
-{#                    <th data-options="field:'Mobile_CB_Price', width:100,formatter:format_money">成本单价</th>#}
-{#                    <th data-options="field:'Mobile_CB_Other_Price', width:100,formatter:format_money">成本送货费<BR>其他费用</th>#}
-{#                    <th data-options="field:'Mobile_CB_Price_Count', width:100,formatter:format_money">成本总价格</th>#}
+                    <th data-options="field:'Mobile_CJ_Price', width:100,formatter:format_money">厂家单价</th>
+                    <th data-options="field:'Mobile_CJ_Other_Price', width:100,formatter:format_money">厂家送货费<BR>其他费用</th>
+                    <th data-options="field:'Mobile_CJ_Price_Count', width:100,formatter:format_money">厂家总价格</th>
+                    <th data-options="field:'Mobile_CB_Price', width:100,formatter:format_money">成本单价</th>
+                    <th data-options="field:'Mobile_CB_Other_Price', width:100,formatter:format_money">成本送货费<BR>其他费用</th>
+                    <th data-options="field:'Mobile_CB_Price_Count', width:100,formatter:format_money">成本总价格</th>
                     <th data-options="field:'Mobile_Clear_Type', width:100">结算方式</th>
                     <th data-options="field:'Mobile_Make_Tick', width:100">客户<br>是否开票</th>
                     <th data-options="field:'Mobile_GPS', width:100">GPS</th>
-{#                    <th data-options="field:'Mobile_Bak_Info', width:100">备注</th>#}
-{#                    <th data-options="field:'Mobile_Tick_Info', width:100">开票信息</th>#}
+                    <th data-options="field:'Mobile_Bak_Info', width:100">备注</th>
+                    <th data-options="field:'Mobile_Tick_Info', width:100">开票信息</th>
                 </tr>
 {% endblock %}
 
@@ -53,7 +53,7 @@
                     mode: 'remote',
                     remoteSort:false,
                     multiSort:true,
-                    required:true,
+{#                    required:true,#}
 					columns: [[
 						{field:'ID',title:'编号',width:80,sortable:true},
 						{field:'Carder_MarkName',title:'承运商',width:100,sortable:true},

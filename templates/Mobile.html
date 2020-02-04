@@ -23,11 +23,12 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
                 singleSelect:true,
                 autoRowHeight:false,
                 pagination:true,
-                fitColumns:true,
+{#                fitColumns:true,#}
                 striped:true,
 {#                checkOnSelect:false,#}
 {#                selectOnCheck:true,#}
                 collapsible:true,
+                pageList:[10,50,100,500,1000],
                 toolbar:'#tb',
                 pageSize:10,
                 rowStyler: function(index,row){
@@ -78,10 +79,11 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
 {#          </div>#}
           <div class="opt-buttons">
             <a href="#" class="easyui-linkbutton add-row" iconCls="icon-add" data-options="selected:true">新增</a>
-            {% if PageID in Pur.Modify %}
+            {% if PageID in Pur.Modify or LoginInfo.isSuper%}
             <a href="#" class="easyui-linkbutton update-row" iconCls="icon-edit">修改</a>
             <a href="#" class="easyui-linkbutton delete-row" iconCls="icon-remove">删除</a>
             {% endif %}
+            <a href="#" class="easyui-linkbutton" iconCls="icon-redo" onclick="$('#dg').datagrid('toExcel','dg.xls')">导出</a>
 {#            <a href="#" class="easyui-linkbutton">发布</a>#}
 {#            <a href="#" class="easyui-linkbutton">取消发布</a>#}
 {#            <a href="#" class="easyui-linkbutton">标记为执行完毕</a>#}
@@ -110,6 +112,7 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
     <script type="text/javascript" src="/static/custom/green/jquery.easyui.min.js?{{ ver }}"></script>
     <script type="text/javascript" src="/static/custom/green/easyui-lang-zh_CN.js?{{ ver }}"></script>
     <script type="text/javascript" src="/static/JS/UI_Plugs/datagridview/datagrid-detailview.js"></script>
+    <script type="text/javascript" src="/static/JS/UI_Plugs/datagrid-export/datagrid-export.js"></script>
 
     {#  加载datagrid自动分页代码  #}
     <script type="text/javascript" src="/static/JS/datagrids_auto_page.js?{{ ver }}"></script>
@@ -158,7 +161,7 @@ p {padding: 4px 0 10px 4px;font-size: 14px}
 
         $(function(){
             $('#dg').datagrid({
-                view: detailview,
+                {#view: detailview,#}
                 detailFormatter: function(rowIndex, rowData){
 					return '<table>'+
                             '<tr>'+

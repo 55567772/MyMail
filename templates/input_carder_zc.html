@@ -14,6 +14,7 @@
                     <th field="Carder_BankNumber" width="130">银行卡号</th>
                     <th field="Carder_BankLive" width="100">开户行</th>
                     <th field="Carder_CarNumber" width="80">车牌号码</th>
+                    <th field="Carder_CarType" width="80">车型</th>
                     <th field="Carder_GPS" width="80">坐标</th>
                     <th field="Carder_BakInfo" width="80">备注</th>
                 </tr>
@@ -88,4 +89,25 @@
                   <span class="important">&nbsp;*&nbsp;</span>请严格填写
                 </span>
               </div>
+
+                <div class="jq-form-row clearfix even">
+                <label>车型：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_CarType" name="Carder_CarType" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
+              <div class="jq-form-row clearfix even">
+                <label>备注：</label>
+                <div class="jq-form-control">
+                  <input class="jq-form-input" id="Carder_BakInfo" name="Carder_BakInfo" type="text" />
+                </div>
+                <span class="jq-form-tip">
+                  <span class="important">&nbsp;*&nbsp;</span>请严格填写
+                </span>
+              </div>
+
 {% endblock %}

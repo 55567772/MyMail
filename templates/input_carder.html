@@ -36,7 +36,6 @@
       <div id="tb" style="padding:0 30px;">
         <form id="f1" method="post">
           {% csrf_token %}
-          <input type="hidden" name="EditType" value="">
           <input type="hidden" name="Carder_Type" value="{% block Carder_Type_f1 %}{% endblock %}">
           <div class="conditions">
 {#            <span class="con-span">承运商编码: </span><input class="easyui-textbox" type="text" name="ID" style="width:166px;height:35px;line-height:35px;"></input>#}
@@ -66,7 +65,6 @@
       </div>
       <div id="add" title="新增承运商" style="width:718px;display:none;">
           <form id="f2" method="post">
-            {% csrf_token %}
             <input type="hidden" id="EditType" name="EditType" value="">
             <input type="hidden" name="Carder_Type" value="{% block Carder_Type_f2 %}{% endblock %}">
             <input type="hidden" id="ID" name="ID" value="">
@@ -136,7 +134,8 @@
         function PostAddCarder() {
             $('#f2').form('submit', {
                 url:'/JSON/ab',
-                onSubmit: function(){
+                onSubmit: function(param){
+                    param.csrfmiddlewaretoken = '{{ csrf_token }}';
                     //开启进度条
                     loading(1);
                 },
@@ -165,17 +164,17 @@
 
         //修改某条记录
         $('.update-row').on('click', function() {
-          let SelectRow = $('#dg').datagrid('getSelected');
-          //设置提交类别EditType为添加
-          $('#EditType').val('edit');
+          var SelectRow = $('#dg').datagrid('getSelected');
           if(!SelectRow){
               $.messager.alert('操作失败','先选中需要操作的行。');
               return false;
           }
           //将选中行的内容赋给各个输入框
-          for(let key in SelectRow){
+          for(var key in SelectRow){
               $('#' + key).val(SelectRow[key])
           }
+          //设置提交类别EditType为修改
+          $('#EditType').val('edit');
             //弹出dialog
             showDialog('add', '修改资料');
         });

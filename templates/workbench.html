@@ -45,28 +45,28 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="attached item-box">
-                        <div class="inform-hd">
-                            <label>信息3</label>
-                            <a href="javascript:;">更多<span>&gt;</span></a>
-                        </div>
-                        <div class="attached-tab">
-                            <a href="javascript:;" class="current item-left" attached="public-attached">信息3-1</a>
-                            <a href="javascript:;" class="item-right" attached="inner-attached">信息3-2</a>
-                        </div>
-                        <ul class="public-attached">
-                            <li>
-                                <span></span>
-                                <a href="javascript:;" class="ellipsis">信息3-1信息3-1信息3-1信息3-1信息3-1</a>
-                            </li>
-                        </ul>
-                        <ul class="inner-attached hide">
-                           <li>
-                                <span></span>
-                                <a href="javascript:;" class="ellipsis">信息3-2信息3-2信息3-2</a>
-                            </li>
-                        </ul>
-                    </div>
+{#                    <div class="attached item-box">#}
+{#                        <div class="inform-hd">#}
+{#                            <label>信息3</label>#}
+{#                            <a href="javascript:;">更多<span>&gt;</span></a>#}
+{#                        </div>#}
+{#                        <div class="attached-tab">#}
+{#                            <a href="javascript:;" class="current item-left" attached="public-attached">信息3-1</a>#}
+{#                            <a href="javascript:;" class="item-right" attached="inner-attached">信息3-2</a>#}
+{#                        </div>#}
+{#                        <ul class="public-attached">#}
+{#                            <li>#}
+{#                                <span></span>#}
+{#                                <a href="javascript:;" class="ellipsis">信息3-1信息3-1信息3-1信息3-1信息3-1</a>#}
+{#                            </li>#}
+{#                        </ul>#}
+{#                        <ul class="inner-attached hide">#}
+{#                           <li>#}
+{#                                <span></span>#}
+{#                                <a href="javascript:;" class="ellipsis">信息3-2信息3-2信息3-2</a>#}
+{#                            </li>#}
+{#                        </ul>#}
+{#                    </div>#}
                 </div>
                 <div class="center-part">
                     <div class="center-items todo">
@@ -78,8 +78,10 @@
                                 <div class="work-inner">
                                     <div class="work-item green">
                                         <i class="iconfont">&#xe61f;</i>
-                                        <span class="num">1&nbsp;<span class="unit">个</span></span>
-                                        <label>待寄件</label>
+                                        <span class="num">
+                                            <span class="mobile_carder_null" style="font-size: 32px">0</span>&nbsp;<span class="unit">个</span></span>
+                                        </span>
+                                        <label>订单未指派承运商</label>
                                     </div>
                                 </div>
                             </li>
@@ -87,7 +89,7 @@
                                 <div class="work-inner">
                                     <div class="work-item red">
                                          <i class="iconfont">&#xe622;</i>
-                                        <span class="num">1&nbsp;<span class="unit">个</span></span>
+                                        <span class="num">0&nbsp;<span class="unit">个</span></span>
                                         <label>GPS异常</label>
                                     </div>
                                 </div>
@@ -96,7 +98,7 @@
                                 <div class="work-inner">
                                     <div class="work-item yellow">
                                          <i class="iconfont">&#xe61d;</i>
-                                        <span class="num">1&nbsp;<span class="unit">条</span></span>
+                                        <span class="num">0&nbsp;<span class="unit">条</span></span>
                                         <label>客户留言</label>
                                     </div>
                                 </div>
@@ -104,27 +106,30 @@
                             <li>
                                 <div class="work-inner">
                                     <div class="work-item blue">
-                                         <i class="iconfont">&#xe621;</i>
-                                        <span class="num">2000,00&nbsp;<span class="unit">万</span></span>
-                                        <label>订单金额</label>
+                                         <i class="iconfont">&#xe647;</i>
+                                        <span class="num">
+                                            <span class="carder_count" style="font-size: 32px">0</span>&nbsp;<span class="unit">个</span></span>
+                                        <label>承运商</label>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="work-inner">
                                     <div class="work-item purple">
-                                         <i class="iconfont">&#xe61e;</i>
-                                        <span class="num">100,00&nbsp;<span class="unit">万</span></span>
-                                        <label>已完成的订单金额</label>
+                                         <i class="iconfont">&#xe60d;</i>
+                                        <span class="num" >
+                                            <span class="Mobile_Client_Count" style="font-size: 32px">0</span>&nbsp;<span class="unit">位</span></span>
+                                        <label>客户</label>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="work-inner">
                                     <div class="work-item gray">
-                                         <i class="iconfont">&#xe620;</i>
-                                        <span class="num">10&nbsp;<span class="unit">个</span></span>
-                                        <label>承运商</label>
+                                         <i class="iconfont">&#xe64b;</i>
+                                        <span class="num">
+                                            <span class="Mobile_Count" style="font-size: 32px">0</span>&nbsp;<span class="unit">个</span></span>
+                                        <label>订单</label>
                                     </div>
                                 </div>
                             </li>
@@ -134,7 +139,7 @@
                         <div class="chart0-item">
                             <div class="item-inner">
                                 <div class="item-content">
-                                    <div class="content-hd">承运商比重</div>
+                                    <div class="content-hd">承运商订单比重统计</div>
                                     <div class="chart-chart" id="chart0"></div>
                                 </div>
                             </div>
@@ -142,18 +147,18 @@
                         <div class="chart0-item">
                             <div class="item-inner">
                                 <div class="item-content">
-                                    <div class="content-hd">交货准确率</div>
+                                    <div class="content-hd">最近几周订单情况统计</div>
                                     <div class="chart-chart" id="chart1"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="center-items chart1">
-                        <div class="chart1-inner">
-                             <div class="item-hd">订单情况</div>
-                             <div class="chart1-chart" id="chart3"></div>
-                        </div>
-                    </div>
+{#                    <div class="center-items chart1">#}
+{#                        <div class="chart1-inner">#}
+{#                             <div class="item-hd">其他统计</div>#}
+{#                             <div class="chart1-chart" id="chart3"></div>#}
+{#                        </div>#}
+{#                    </div>#}
                 </div>
             </div>
         </div>
@@ -163,16 +168,17 @@
     <div class="todo-panel">
          <div class="todo-title">
             <i class="iconfont">&#xe61f;</i>
-            <span class="num">1&nbsp;<span class="unit">个</span></span>
-            <label>待办未处理</label>
+            <span class="num"><span class="mobile_carder_null" style="font-size: 32px;color: #f45438">0</span>&nbsp;<span class="unit">个</span></span>
+            <label>订单未指派承运商</label>
         </div>
         <div class="todo-items">
             <ul>
                 <li>
                     <span></span>
-                    <a href="javascript:;" class="ellipsis">您有<span>1条</span>信息未处理<i></i></a>
+                    <a href="javascript:;" class="ellipsis">您有<span>1条a</span>信息未处理</a>
                     <label>04-13</label>
                 </li>
+
             </ul>
         </div>
 
@@ -186,42 +192,15 @@
     //chart0
 
     $(document).ready(function(){
-        var option0 = {
+        option0 = {
             tooltip : {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
-            legend: {
-                orient : 'vertical',
-                x : 'left',
-                data:['直接访问1','邮件营销','联盟广告','视频广告','搜索引擎'],
-                show:false
-            },
-            toolbox: {
-                show : false,
-                feature : {
-                    mark : {show: true},
-                    dataView : {show: true, readOnly: false},
-                    magicType : {
-                        show: true,
-                        type: ['pie', 'funnel'],
-                        option: {
-                            funnel: {
-                                x: '25%',
-                                width: '50%',
-                                funnelAlign: 'center',
-                                max: 1548
-                            }
-                        }
-                    },
-                    restore : {show: true},
-                    saveAsImage : {show: true}
-                }
-            },
             calculable : true,
             series : [
                 {
-                    name:'访问来源',
+                    name:'承运商',
                     type:'pie',
                     radius : ['50%', '70%'],
                     itemStyle : {
@@ -244,28 +223,18 @@
                             }
                         }
                     },
-                    data:[
-                        {value:335, name:'直接访问2'},
-                        {value:310, name:'邮件营销'},
-                        {value:234, name:'联盟广告'},
-                        {value:135, name:'视频广告'},
-                        {value:1548, name:'搜索引擎'}
-                    ]
+                    data:[]
                 }
             ]
         };
 
-      var myChart0 = echarts.init(document.getElementById('chart0'));
-      myChart0.setOption(option0);
+      {#var myChart0 = echarts.init(document.getElementById('chart0'));#}
+      {#myChart0.setOption(option0);#}
 
       //chart1
-     var option1 = {
+     option1 = {
             tooltip : {
                 trigger: 'axis'
-            },
-            legend: {
-                data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎'],
-                show:false
             },
             toolbox: {
                 show : false,
@@ -296,35 +265,11 @@
                     type:'line',
                     stack: '总量',
                     data:[120, 132, 101, 134, 90, 230, 210]
-                },
-                {
-                    name:'联盟广告',
-                    type:'line',
-                    stack: '总量',
-                    data:[220, 182, 191, 234, 290, 330, 310]
-                },
-                {
-                    name:'视频广告',
-                    type:'line',
-                    stack: '总量',
-                    data:[150, 232, 201, 154, 190, 330, 410]
-                },
-                {
-                    name:'直接访问3',
-                    type:'line',
-                    stack: '总量',
-                    data:[320, 332, 301, 334, 390, 330, 320]
-                },
-                {
-                    name:'搜索引擎',
-                    type:'line',
-                    stack: '总量',
-                    data:[820, 932, 901, 934, 1290, 1330, 1320]
                 }
             ]
         };
-        var myChart1 = echarts.init(document.getElementById('chart1'));
-        myChart1.setOption(option1);
+{#        var myChart1 = echarts.init(document.getElementById('chart1'));#}
+{#        myChart1.setOption(option1);#}
 
         var option3 = {
             tooltip : {
@@ -376,15 +321,16 @@
             ]
         };
 
-        var myChart3 = echarts.init(document.getElementById('chart3'));
-        myChart3.setOption(option3);         
+        {#var myChart3 = echarts.init(document.getElementById('chart3'));#}
+        {#myChart3.setOption(option3);         #}
           
-        //我的待办点击事件
+        //未指派承运商点击事件
         $(document).on('click','.work-item.green',function(event){
-            var width = (2 * $(this).width()) + 10;
-            $(".todo-panel").width(width -2).css({top:$(this).offset().top,left:$(this).offset().left}).show();
-            event.stopPropagation();
+            //var width = (2 * $(this).width()) + 10;
+            //$(".todo-panel").width(width -2).css({top:$(this).offset().top,left:$(this).offset().left}).show();
+            //event.stopPropagation();
         });
+
         $(".todo-panel").click(function(){
              event.stopPropagation();
         });    
@@ -401,7 +347,25 @@
         $(this).closest(".attached").find("ul").addClass("hide");   
         $(this).closest(".attached").find("ul." + $(this).attr("attached")).removeClass("hide");    
     })
-                    
+
+    $(function () {
+        $.getJSON("/JSON/ag", function(json){
+            console.log(json)
+            for(var row in json.main_count){
+                $('.'+ row).html(json.main_count[row])
+            }
+          // 初始化 option0 图表 ,即承运商订单比例
+          var myChart0 = echarts.init(document.getElementById('chart0'));
+          option0.series[0].data = json.option0
+          myChart0.setOption(option0);
+
+          // 初始化 option0 图表 ,即承运商订单比例
+          var myChart1 = echarts.init(document.getElementById('chart1'));
+          option1.xAxis[0].data = json.option1.week
+          option1.series[0].data = json.option1.data
+          myChart1.setOption(option1);
+        });
+    })
     </script>
 </body> 
 </html>

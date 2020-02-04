@@ -121,9 +121,10 @@ class GetJSON:
             p = Pinyin()
             if self.args['EditType'] == 'add':
                 sql = "INSERT INTO Carder(Carder_MarkName, Carder_Mobile, " \
-                              "Carder_Address, Carder_User, Carder_BankUserName, " \
-                              "Carder_BankNumber, Carder_BankLive, Carder_Type, Carder_CarNumber, Carder_PY) " \
-                              "values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')" \
+                      "Carder_Address, Carder_User, Carder_BankUserName, " \
+                      "Carder_BankNumber, Carder_BankLive, Carder_Type, " \
+                      "Carder_CarNumber, Carder_BakInfo, Carder_CarType, Carder_PY) " \
+                      "values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')" \
                               .format(safe(self.args.get('Carder_MarkName', '')),
                                       safe(self.args.get('Carder_Mobile', '')),
                                       safe(self.args.get('Carder_Address', '')),
@@ -133,15 +134,18 @@ class GetJSON:
                                       safe(self.args.get('Carder_BankLive', '')),
                                       safe(self.args.get('Carder_Type', '')),
                                       safe(self.args.get('Carder_CarNumber', '')),
+                                      safe(self.args.get('Carder_BakInfo', '')),
+                                      safe(self.args.get('Carder_CarType', '')),
                                       p.get_initials(self.args.get('Carder_MarkName', ''), ''))
                 conn.eDB(sql)
                 res_id = conn.sDB("select cast(IDENT_CURRENT('Carder') as nvarchar(20)) as ID")[0]
                 self.args['ID'] = int(res_id['ID'])
             else:
                 sql = "UPDATE Carder Set Carder_MarkName = '{0}', Carder_Mobile = '{1}', " \
-                              "Carder_Address = '{2}', Carder_User = '{3}', Carder_BankUserName = '{4}', " \
-                              "Carder_BankNumber = '{5}', Carder_BankLive = '{6}', Carder_Type = '{7}', " \
-                              "Carder_CarNumber = '{8}', Carder_PY = '{9}' where ID='{10}'" \
+                      "Carder_Address = '{2}', Carder_User = '{3}', Carder_BankUserName = '{4}', " \
+                      "Carder_BankNumber = '{5}', Carder_BankLive = '{6}', Carder_Type = '{7}', " \
+                      "Carder_CarNumber = '{8}', Carder_BakInfo = '{9}', Carder_CarType = '{10}', " \
+                      "Carder_PY = '{11}' where ID='{12}'" \
                               .format(safe(self.args.get('Carder_MarkName', '')),
                                       safe(self.args.get('Carder_Mobile', '')),
                                       safe(self.args.get('Carder_Address', '')),
@@ -151,6 +155,8 @@ class GetJSON:
                                       safe(self.args.get('Carder_BankLive', '')),
                                       safe(self.args.get('Carder_Type', '')),
                                       safe(self.args.get('Carder_CarNumber', '')),
+                                      safe(self.args.get('Carder_BakInfo', '')),
+                                      safe(self.args.get('Carder_CarType', '')),
                                       p.get_initials(self.args.get('Carder_MarkName', ''), ''),
                                       safe(self.args.get('ID', '')))
                 conn.eDB(sql)
@@ -220,11 +226,11 @@ class GetJSON:
     def ae(self):
         Mobile_OrderNumber = "TC" + str(datetime.datetime.now().strftime('%Y%m%d%H%M%S%f'))
         DateTime = self.args.get('DateTime', datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S'))
+        # 根据Carder_ID取承运商名字
+        Carder_ID = self.args.get('Carder_ID', 0)
+        sql_1 = "select dbo.Get_CarderMarkName('{0}') as Carder_MarkName".format(Carder_ID)
+        self.args['Carder_MarkName'] = conn.sDB(sql_1)[0]['Carder_MarkName']
         try:
-            # 根据ID取承运商名字
-            sql_1 = "select dbo.Get_CarderMarkName('{0}') as Carder_MarkName".format(int(self.args.get('Carder_ID', 0)))
-            self.args['Carder_MarkName'] = conn.sDB(sql_1)[0]['Carder_MarkName']
-
             if self.args['EditType'] == 'add':
                 sql = "INSERT INTO Mobile(" \
                      "Mobile_OrderNumber, Carder_ID, Mobile_Client, " \
@@ -237,7 +243,7 @@ class GetJSON:
                      "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}'," \
                      "'{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}')" \
                      .format(Mobile_OrderNumber,
-                             int(self.args.get('Carder_ID', 0)),
+                             Carder_ID,
                              safe(self.args.get('Mobile_Client', '')),
                              safe(self.args.get('Mobile_Goods', '')),
                              float(self.args.get('Mobile_Goods_Count', 0)),
@@ -275,7 +281,7 @@ class GetJSON:
                       "Mobile_CB_Price='{14}',Mobile_CB_Other_Price='{15}', Mobile_CB_Price_Count='{16}', " \
                       "Mobile_Clear_Type='{17}', Mobile_Make_Tick='{18}', AdminInfo=AdminInfo + '{19}', " \
                       "Mobile_Bak_Info='{20}',Mobile_isModify=1 where ID='{21}'"\
-                    .format(int(self.args.get('Carder_ID', 0)),
+                    .format(Carder_ID,
                             safe(self.args.get('Mobile_Client', '')),
                             safe(self.args.get('Mobile_Goods', '')),
                             float(self.args.get('Mobile_Goods_Count', 0)),
@@ -303,20 +309,50 @@ class GetJSON:
         except Exception as err:
             return str(json.dumps({"err": str(err)}))
 
-    # 首页的一些统计
-    def af(self):
-        # 统计承运商数量
-        sql = "select"
-        pass
-
     # 删除订单
     @csrf_exempt
     def af(self):
         try:
-            conn.eDB("DELETE FROM Mobile WHERE ID = '{0}'".format(int(self.args['ID'])))
+            conn.eDB("DELETE FROM Mobile WHERE ID = '{0}'".format(int(self.args.get('ID', 0))))
             return str(json.dumps({"err": False, "data": "ok"}))
         except Exception as err:
             return str(json.dumps({"err": str(err)}))
+
+    # 首页的一些统计
+    def ag(self):
+        main_dict = dict()
+        main_count = dict()
+        # 统计承运商数量
+        res = conn.sDB("select count(ID) as c from Carder")
+        main_count['carder_count'] = res[0]['c']
+        # 统计未录入承运商的订单
+        res = conn.sDB("select count(ID) as c from Mobile where Carder_ID = 0")
+        main_count['mobile_carder_null'] = res[0]['c']
+        # 统计订单数量、客户数量
+        res = conn.sDB("select count(ID) as Mobile_Count, count(distinct Mobile_Client) as Mobile_Client_Count "
+                       "from Mobile where year(DateTime)=YEAR(GETDATE())")[0]
+        main_count = dict(main_count, **res)
+        # 压入顶部字典
+        main_dict['main_count'] = main_count
+        # 承运商订单数量比例图表数据
+        option0 = conn.sDB("select count(ID) as value,dbo.Get_CarderMarkName(Carder_ID) as name from Mobile where Carder_ID<>0 group by Carder_ID")
+        main_dict['option0'] = option0
+        # 按周计算订单数量
+        sql = "select count(ID) as c,'第'+ datename(week,DateTime) +'周' as week " \
+              "from Mobile where DateDiff(week,DateTime,GETDATE())<=7 group by DateName(week,DateTime)"
+        res = conn.sDB(sql)
+        option1 = {}; option1['week'] = []; option1['data'] = []
+        for row in res:
+            print(row)
+            option1['week'].append(row['week'])
+            option1['data'].append(row['c'])
+        main_dict['option1'] = option1
+        # main_dict['option1'] = 1
+        # print(list_week,list_data)
+        return HttpResponse(json.dumps(main_dict))
+
+        # Car = "select count(ID) from Mobile where year(DateTime)=YEAR(GETDATE())"
+
 
     # 获取页面权限树
     @csrf_exempt

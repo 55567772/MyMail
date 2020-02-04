@@ -2,27 +2,507 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64923359-9039-4f27-9efe-fb67761f3e6e" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/dbo.sYMBAA.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/5000个小图标.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/anchor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/arrow_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/asterisk_orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/asterisk_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/attach.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bell_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bell_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bell_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bell_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bell_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bin_closed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bin_empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bomb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_addresses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/book_previous.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/brick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/brick_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/brick_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/brick_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/brick_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/brick_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/brick_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bricks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/briefcase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/building_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_arrow_bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_arrow_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_arrow_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_arrow_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_disk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_feed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_toggle_minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_toggle_plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_wrench.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/bullet_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/clock_stop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cog_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cog_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cog_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cog_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cog_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/coins.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/coins_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/coins_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/color_swatch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/color_wheel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/comment_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/comment_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/comment_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/comments.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/comments_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/comments_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/compress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/computer_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/connect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/contrast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/contrast_decrease.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/contrast_high.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/contrast_increase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/contrast_low.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/controller.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/controller_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/controller_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/controller_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/creditcards.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cup_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cursor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/cut_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_connect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_gear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_lightning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/database_table.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/disconnect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/disk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/disk_multiple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/door_in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/door_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/door_out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/drink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/drink_empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/dvd_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_evilgrin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_grin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_happy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_surprised.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_tongue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_unhappy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_waii.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/emoticon_wink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/error_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/error_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/error_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/exclamation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/eye.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/female.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/find.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/font.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/font_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/font_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/font_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/heart_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/heart_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/hourglass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/hourglass_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/hourglass_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/hourglass_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/hourglass_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/house.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/house_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/house_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/html.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/html_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/html_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/html_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/html_valid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/image_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/image_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/image_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/image_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/images.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/images_send.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/information.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/joystick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/joystick_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/joystick_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/joystick_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/key_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/key_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/key_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/layers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightbulb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightbulb_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightbulb_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightbulb_off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightning_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightning_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lightning_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/link_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/link_break.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/link_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/link_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/link_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/link_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lorry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lorry_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lorry_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lorry_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lorry_flatbed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lorry_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/lorry_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/male.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_bronze_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_bronze_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_bronze_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_bronze_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_bronze_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_gold_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_gold_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_gold_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_gold_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_gold_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_silver_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_silver_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_silver_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_silver_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/medal_silver_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/money_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/money_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/money_dollar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/money_euro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/money_pound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/money_yen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/mouse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/mouse_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/mouse_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/mouse_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/music.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/package.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/package_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/package_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/package_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/package_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/package_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/paintbrush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/paintcan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/palette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pencil_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pencil_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pencil_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/phone_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/phone_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/phone_sound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pilcrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pill.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pill_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pill_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/pill_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/plugin_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/rainbow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/resultset_first.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/resultset_last.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/resultset_next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/resultset_previous.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/rosette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/rss_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/rss_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/rss_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/rss_valid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_gear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_get.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/ruby_put.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_compressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_connect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_database.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_lightning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/server_uncompressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shading.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_align_bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_align_center.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_align_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_align_middle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_align_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_align_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_flip_horizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_flip_vertical.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_group.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_handles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_move_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_move_backwards.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_move_forwards.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_move_front.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_rotate_anticlockwise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_rotate_clockwise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_square_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shape_ungroup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shield_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shield_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/shield_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sitemap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sitemap_color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sound_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sound_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sound_low.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sound_mute.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sound_none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/spellcheck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_8ball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_basketball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_football.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_golf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_raquet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_shuttlecock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_soccer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/sport_tennis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/status_away.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/status_busy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/status_offline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/status_online.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/stop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/style.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/style_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/style_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/style_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/style_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tab_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tab_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tab_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tab_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/telephone_link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_align_center.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_align_justify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_align_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_align_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_allcaps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_bold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_columns.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_dropcaps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_heading_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_heading_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_heading_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_heading_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_heading_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_heading_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_horizontalrule.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_indent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_indent_remove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_italic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_kerning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_letter_omega.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_letterspacing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_linespacing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_list_bullets.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_list_numbers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_lowercase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_padding_bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_padding_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_padding_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_padding_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_replace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_signature.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_smallcaps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_strikethrough.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_subscript.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_superscript.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_underline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/text_uppercase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/textfield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/textfield_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/textfield_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/textfield_key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/textfield_rename.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/thumb_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/thumb_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/time_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/time_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/time_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/timeline_marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/transmit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/transmit_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/transmit_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/transmit_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/transmit_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/transmit_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/transmit_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/tux.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/vector.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/vector_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/vector_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/wand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/weather_clouds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/weather_cloudy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/weather_lightning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/weather_rain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/weather_snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/weather_sun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/webcam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/webcam_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/webcam_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/webcam_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/wrench.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/wrench_orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/xhtml.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/xhtml_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/xhtml_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/xhtml_go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icons/xhtml_valid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Mobile_Detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Mobile_Detail_Carder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Mobile_Detail_Client.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Mobile_Manager@.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9226cb96-6dbc-4258-9059-d2586dd03e48/storage_v2/_src_/database/GPS.ihQBAA/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/DB/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyMail/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyMail/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Urls/get_JSON.py" beforeDir="false" afterPath="$PROJECT_DIR$/Urls/get_JSON.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Urls/get_Template.py" beforeDir="false" afterPath="$PROJECT_DIR$/Urls/get_Template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/WebStyle/green/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/WebStyle/green/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/custom/green/uimaker/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/custom/green/uimaker/icon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Mobile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Mobile_Manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Mobile_Manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/User_Manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/User_Manager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/input_carder.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/input_carder.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/input_carder_zc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/input_carder_zc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/input_carder_zx.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/input_carder_zx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/workbench.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/workbench.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/软件要求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/软件要求.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,13 +544,6 @@
         <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="GPS" type="feb32156:DbDataSourceImpl" />
-        <item name="GPS: database" type="ccb7ac2a:MsImplModel$Database" />
-        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
-        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -105,7 +578,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyMusic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
@@ -114,7 +587,7 @@
       <recent name="D:\WebSites\MyMail\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.MyMail">
+  <component name="RunManager" selected="Python.test">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyMail" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,9 +709,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.test1" />
         <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.urls" />
       </list>
     </recent_temporary>
@@ -256,7 +729,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:GPS" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@551da768" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@77432782" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:GPS" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@56206935" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -287,6 +765,9 @@
       <workItem from="1580376495536" duration="19164000" />
       <workItem from="1580454069466" duration="10206000" />
       <workItem from="1580520616811" duration="38971000" />
+      <workItem from="1580635699715" duration="5467000" />
+      <workItem from="1580644325920" duration="5307000" />
+      <workItem from="1580691721552" duration="17798000" />
     </task>
     <task id="LOCAL-00001" summary="XM by 20200123,For GPS">
       <created>1579760690550</created>
@@ -344,7 +825,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580518537779</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="20200202 By XM">
+      <created>1580635739163</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580635739163</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +855,8 @@
     <MESSAGE value="20200128 AM" />
     <MESSAGE value="20200131 AM" />
     <MESSAGE value="20200201 AM" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200201 AM" />
+    <MESSAGE value="20200202 By XM" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200202 By XM" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="27" key="#Deployment" timestamp="1579759385633">
@@ -390,55 +879,55 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="27" key="#SQL_Resolution_Scopes/0.0.1366.738@0.0.1366.738" timestamp="1580001927640" />
-    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580376425385">
+    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580693035094">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580376425385" />
+    <state x="274" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580693035094" />
     <state x="275" y="27" key="#其他文件类型" timestamp="1580551903110">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="27" key="#其他文件类型/0.0.1366.738@0.0.1366.738" timestamp="1580551903110" />
-    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1580518535917">
+    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1580635725359">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580518535917" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1580449877597">
+    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580635725359" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1580635893176">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.738@0.0.1366.738" timestamp="1580449877597" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.738@0.0.1366.738" timestamp="1580635893176" />
     <state x="448" y="124" key="FileChooserDialogImpl" timestamp="1580621534994">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="420" y="124" key="FileChooserDialogImpl/0.0.1280.738@0.0.1280.738" timestamp="1579599960244" />
     <state x="448" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580621534994" />
-    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog" timestamp="1580176009230">
+    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog" timestamp="1580809253391">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog/0.0.1366.738@0.0.1366.738" timestamp="1580176009230" />
-    <state width="1323" height="117" key="GridCell.Tab.0.bottom" timestamp="1580635671166">
+    <state x="558" y="259" width="273" height="219" key="Github.ShareDialog/0.0.1366.738@0.0.1366.738" timestamp="1580809253391" />
+    <state width="1323" height="117" key="GridCell.Tab.0.bottom" timestamp="1580701377579">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.bottom/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="117" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580635671166" />
-    <state width="1323" height="117" key="GridCell.Tab.0.center" timestamp="1580635671166">
+    <state width="1323" height="117" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580701377579" />
+    <state width="1323" height="117" key="GridCell.Tab.0.center" timestamp="1580701377579">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.center/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="117" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580635671166" />
-    <state width="1323" height="117" key="GridCell.Tab.0.left" timestamp="1580635671166">
+    <state width="1323" height="117" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580701377579" />
+    <state width="1323" height="117" key="GridCell.Tab.0.left" timestamp="1580701377579">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.left/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="117" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580635671166" />
-    <state width="1323" height="117" key="GridCell.Tab.0.right" timestamp="1580635671166">
+    <state width="1323" height="117" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580701377579" />
+    <state width="1323" height="117" key="GridCell.Tab.0.right" timestamp="1580701377579">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="845" height="191" key="GridCell.Tab.0.right/0.0.1280.768@0.0.1280.768" timestamp="1579946185407" />
-    <state width="1323" height="117" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580635671166" />
-    <state width="237" height="477" key="HiddenNamespacesPopup" timestamp="1579948062722">
+    <state width="1323" height="117" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580701377579" />
+    <state width="237" height="477" key="HiddenNamespacesPopup" timestamp="1580695978914">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="237" height="477" key="HiddenNamespacesPopup/0.0.1366.738@0.0.1366.738" timestamp="1579948062722" />
+    <state width="237" height="477" key="HiddenNamespacesPopup/0.0.1366.738@0.0.1366.738" timestamp="1580695978914" />
     <state x="184" y="11" key="SettingsEditor" timestamp="1580628490939">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -447,14 +936,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="239" height="461" key="SqlResolveConfigurable/0.0.1366.738@0.0.1366.738" timestamp="1580001926047" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1580518548250">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1580809235195">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580518548250" />
-    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1580381355142">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580809235195" />
+    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1580645267966">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738@0.0.1366.738" timestamp="1580381355142" />
+    <state x="582" y="258" width="343" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738@0.0.1366.738" timestamp="1580645267966" />
     <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog" timestamp="1580021691462">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -467,19 +956,23 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="498" y="192" width="370" height="346" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.738@0.0.1366.738" timestamp="1580450771005" />
-    <state x="368" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580548700424">
+    <state x="368" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580788077514">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="368" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1580548700424" />
+    <state x="368" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1580788077514" />
+    <state x="418" y="220" key="com.intellij.database.view.ui.DatabasePreviewDialog" timestamp="1580645088982">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="418" y="220" key="com.intellij.database.view.ui.DatabasePreviewDialog/0.0.1366.738@0.0.1366.738" timestamp="1580645088982" />
     <state x="539" y="115" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1579939617733">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="539" y="115" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.738@0.0.1366.738" timestamp="1579939617733" />
-    <state x="361" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1580635700283">
+    <state x="361" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1580691722767">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="338" y="193" key="com.intellij.ide.util.TipDialog/0.0.1280.738@0.0.1280.738" timestamp="1579655851271" />
-    <state x="361" y="201" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1580635700283" />
+    <state x="361" y="201" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1580691722767" />
     <state x="261" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580605894240">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -493,6 +986,6 @@
     <SUITE FILE_PATH="coverage/MyMail$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1580544740593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MyMail$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1580096995388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
     <SUITE FILE_PATH="coverage/MyMail$urls.coverage" NAME="urls Coverage Results" MODIFIED="1579941213238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MyMail" />
-    <SUITE FILE_PATH="coverage/MyMail$test.coverage" NAME="test Coverage Results" MODIFIED="1580000976243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
+    <SUITE FILE_PATH="coverage/MyMail$test.coverage" NAME="test Coverage Results" MODIFIED="1580698998309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
   </component>
 </project>

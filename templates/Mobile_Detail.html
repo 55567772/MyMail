@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>账单汇总</title>
+    <link href="/static/WebStyle/green/css/base.css?{{ ver }}" rel="stylesheet">
+    <link rel="stylesheet" href="/static/custom/green/uimaker/easyui.css?{{ ver }}">
+    <link rel="stylesheet" type="text/css" href="/static/custom/green/uimaker/icon.css?{{ ver }}">
+    <link rel="stylesheet" href="/static/WebStyle/green/css/providers1.css?{{ ver }}">
+    <script type="text/javascript" src="/static/JS/function.js?{{ ver }}"></script>
+
+    <style type="text/css">
+    .messager-body{line-height:50px}.messager-window .messager-icon{margin-left:35px}.messager-window .messager-button{border-top:0;background:#fff}.jq-form{margin:10px;padding:0 9px;background:#f1f1f1;font-size:14px}.jq-form .jq-form-row{padding:0 165px;min-height:45px;line-height:45px}.jq-form .jq-form-row.jq-form-submit{height:80px;line-height:80px}.jq-form .jq-form-row.even{background:#fff}.jq-form .jq-form-row>label{float:left;margin-left:-165px;padding-left:30px;width:135px}.jq-form .jq-form-row .jq-form-control{float:left;width:100%}.jq-form .jq-form-row .jq-form-control .jq-form-input{width:100%;height:31px;padding:0 10px;box-sizing:border-box}.jq-form .jq-form-row .jq-form-control .jq-form-textarea{margin-top:10px;width:100%;height:110px;padding:5px;box-sizing:border-box}.jq-form .jq-form-row .jq-form-tip{float:right;margin-right:-165px;padding-left:20px;width:145px;color:#7f7f7f}.jq-form .jq-form-row .jq-form-tip .important{color:#df0000}.jq-form .jq-form-row.jq-form-time .textbox{width:auto!important;height:30px!important;line-height:30px!important}.jq-form .jq-form-row.jq-form-time .textbox-text{width:314px!important;height:30px!important;line-height:30px!important}
+    p {padding: 4px 0 10px 4px;font-size: 14px}
+    </style>
+</head>
+<body>
+    <div class="container">
+       <table id="dg" style="width:100%;height:auto" title="{% block dg_title %}{% endblock %}" data-options="
+                rownumbers:true,
+                singleSelect:true,
+                autoRowHeight:false,
+                pagination:true,
+                fitColumns:false,
+                striped:true,
+{#                checkOnSelect:false,#}
+{#                selectOnCheck:true,#}
+                collapsible:true,
+                pageList:[10,50,100,500,1000],
+                toolbar:'#tb',
+                pageSize:10,
+                showFooter: true,
+                rowStyler: function(index,row){
+					if (row.Mobile_isModify == 1){
+						return 'background-color:#c16969;color:#fff;font-weight:bold;';
+					}
+				}
+        ">
+            <thead>
+            {% block tr %} {% endblock %}
+            </thead>
+        </table>
+      <div id="tb" style="padding:0 30px;">
+        <form id="f1" method="post">
+          {# 头部查询框 #}
+          {% block search_input %}{% endblock %}
+          <div class="opt-buttons">
+            <span class="con-span">快速选择月份: </span>
+{#            <a href="#" class="easyui-linkbutton" onclick="CheckPost('0');" data-options="toggle:true,group:'g2',plain:true,selected:true">全部月分</a>#}
+            {% for m in other_dic.Month %}
+            <a href="#" class="easyui-linkbutton" onclick="CheckPost_For_Month('{{ m }}')" data-options="toggle:true,group:'g2',plain:true">{{ m }}月</a>
+            {% endfor %}
+          </div>
+       </form>
+      </div>
+      <div id="add" title="新增订单" style="width:718px;display:none;">
+          <form id="f2" method="post">
+            <input type="hidden" id="ID" name="ID" value="">
+            <input type="hidden" id="EditType" name="EditType" value="">
+            <div class="jq-form">
+                {% block input %} {% endblock %}
+
+              <div class="jq-form-row clearfix jq-form-submit">
+                <div class="jq-form-control">
+                  <a href="#" onclick="PostAddMobile();" class="easyui-linkbutton" data-options="selected:true,">确定</a>
+                  <a href="#" onclick="$('#add').dialog('close')" class="easyui-linkbutton">关闭</a>
+                </div>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="/static/custom/green/jquery.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/custom/green/jquery.easyui.min.js?{{ ver }}"></script>
+    <script type="text/javascript" src="/static/custom/green/easyui-lang-zh_CN.js?{{ ver }}"></script>
+{#    <script type="text/javascript" src="/static/JS/UI_Plugs/datagridview/datagrid-detailview.js"></script>#}
+    <script type="text/javascript" src="/static/JS/UI_Plugs/datagrid-export/datagrid-export.js"></script>
+
+    {#  加载datagrid自动分页代码  #}
+    <script type="text/javascript" src="/static/JS/datagrids_auto_page.js?{{ ver }}"></script>
+
+    <script type="text/javascript">
+        // 格式化金额样式
+        function format_money(value,row){
+            if(value){
+                return '￥' + value;
+            }else{
+                return '';
+            }}
+
+        function format_KG(value,row){
+            if(value){
+                return value + ' Kg';
+            }else{
+                return '';
+            }}
+
+        $('.add-row').on('click', function() {
+            //设置提交类别EditType为添加
+            $('#f2').form('reset');
+            $('#EditType').val('add');
+            //弹出dialog
+            showDialog('add', '增加资料');
+        })
+
+        //修改某条记录
+        $('.update-row').on('click', function() {
+          let SelectRow = $('#dg').datagrid('getSelected');
+          //设置提交类别EditType为添加
+          $('#EditType').val('edit');
+          if(!SelectRow){
+              $.messager.alert('操作失败','先选中需要操作的行。');
+              return false;
+          }
+          //将选中行的内容赋给各个输入框
+          for(let key in SelectRow){
+              if(['Carder_ID'].indexOf(key) != -1){
+                  console.log(SelectRow[key])
+                  $('#' + key).combogrid('setValue', SelectRow[key])
+              }else if(['Mobile_Goods_Count','Mobile_Goods_Square','Mobile_KG','Mobile_CJ_Price','Mobile_CJ_Other_Price','Mobile_CJ_Price_Count','Mobile_CB_Price','Mobile_CB_Other_Price','Mobile_CB_Price_Count'].indexOf(key) != -1){
+                  $('#' + key).numberbox('setValue', SelectRow[key])
+              }else {
+                  $('#' + key).val(SelectRow[key])
+              }
+          }
+            //弹出dialog
+            showDialog('add', '修改资料');
+        });
+
+        $(function(){
+            //页面载入时加载远程内容
+            CheckPost('0');
+        });
+
+
+        $(".more").click(function(){
+            $(this).closest(".conditions").siblings().toggleClass("hide");
+        });
+
+        // 当查询按钮点击
+        $(".search").click(function(){
+            CheckPost('0');
+        });
+
+        //查询订单
+        function CheckPost(month){
+            $('#f1').form('submit', {
+                url:'/JSON/ad',
+                onSubmit: function(param){
+                    param.csrfmiddlewaretoken = '{{ csrf_token }}';
+                    param.month = month;
+                    loading(1);
+                },
+                success:function(data){
+                    {#console.log(data)#}
+                    $('#dg').datagrid({data: JSON.parse(data)}).datagrid('clientPaging');
+                    loading(0)
+                }
+            });
+        }
+
+        function CheckPost_For_Month(month) {
+            $('#sTime').datebox('clear');
+            $('#eTime').datebox('clear');
+            CheckPost(month);
+        }
+        // 提交操作
+        function PostAddMobile() {
+            $('#f2').form('submit', {
+                url:'/JSON/ae',
+                onSubmit: function(param){
+                    param.csrfmiddlewaretoken = '{{ csrf_token }}';
+                    //开启进度条
+                    return $(this).form('validate');
+                    loading(1);
+                },
+                success:function(data){
+                    //关闭进度条
+                    loading(0)
+                    data = JSON.parse(data);
+                    console.log(data);
+                    if(!data.err){
+                        if(data['data'].EditType=='add'){
+                            //如果是添加动作，就向datagrid增加一条记录，不用刷新
+                            addRow('dg', data.data);
+                        }else if(data['data'].EditType=='edit'){
+                            //否则如果是编辑动作，就更新刚才的那条选中的记录，不刷新
+                            updateRow('dg', data.data);
+                        }
+                        $.messager.alert('操作成功','操作成功');
+                        $('#add').dialog('close')
+                    }else{
+                        $.messager.alert('操作失败',data.err);
+                    }
+                }
+            });
+        }
+
+        //删除某条记录
+        $('.delete-row').on('click', function() {
+          let row = $('#dg').datagrid('getSelected');
+          {#console.log(row)#}
+          if(!row){
+              $.messager.alert('操作失败','先选中需要操作的行。');
+              return false;
+          }
+          $.messager.confirm({
+            title: '提示信息',
+            ok: '确定',
+            icon: 'error',
+            cancel: '取消',
+            msg: '你确定要删除选中记录？',
+            fn: function(r) {
+              if(r) {
+                $.getJSON("/JSON/af", { ID: row.ID }, function(data){
+                    if(!data.err) {
+                        //删除指定行
+                        deleteRow('dg');
+                 }else {
+                   $.messager.alert('操作失败',data.err);
+                 }
+                });
+              } else {
+                console.log('NO');
+              }
+            }
+          });
+          $('.messager-window').find('.l-btn-small').eq(0).addClass('l-btn-selected');
+          $('.messager-window').find('.messager-icon').removeClass('messager-question').addClass('messager-error');
+        })
+    </script>
+{#<table>#}
+{#    <tr>#}
+{#        <td c></td>#}
+{#    </tr>#}
+{#</table>#}
+</body>
+</html>
